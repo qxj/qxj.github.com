@@ -1,0 +1,91 @@
+# Welcome to Jekyll!
+#
+# https://jekyllrb.com/docs/configuration/
+
+# Site settings
+title: blog | 逍遥郡
+email: jqian@jqian.net
+author: Julian Qian
+description: >- # this means to ignore newlines until "baseurl:"
+  记录编程、Hack和自娱自乐的一些玩意。
+baseurl: "" # the subpath of your site, e.g. /blog
+url: ""     # the base hostname & protocol for your site, e.g. http://example.com
+
+twitter_username: jqian
+disqus_shortname: jqian
+google_analytics: UA-1819306-7
+
+excerpt_separator: ""
+highlighter: rouge
+theme: minima
+
+collections:
+  posts:
+    output: true
+    permalink: /post/:title.html
+  pages:
+    output: true
+    permalink: /:title.html
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: "post"
+      typora-copy-images-to: "../images"
+
+# https://help.github.com/articles/configuring-jekyll-plugins/#default-plugins
+plugins:
+  - jekyll-feed
+  # - jekyll-archives
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-seo-tag
+
+# Markdown processors (redcarpet/kramdown)
+markdown: kramdown
+
+kramdown:
+  input: GFM        # use Github Flavored Markdown
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+
+# Exclude from processing.
+exclude:
+  - contrib*
+  - temp*
+  - \#*\#
+  - .\#*
+
+# Archives configuration
+# https://github.com/jekyll/jekyll-archives/blob/master/docs/configuration.md
+jekyll-archives:
+  enabled:
+    - tags
+  layout: 'tag'
+  permalinks:
+    tag: '/tag/:name/'
+
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+
+# Sitemap configuration
+# https://github.com/kinnetica/jekyll-plugins
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+    include_posts:
+        - "/index.html"

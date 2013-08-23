@@ -1,0 +1,34 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: base
+pagination:
+  enabled: true
+---
+
+{% assign latest_posts = site.posts | slice: 0, 4 %}
+
+{% for post in latest_posts %}
+    <div class="post">
+        <h2 class="title"><a href="{{ post.url }}#content">{{ post.title }}</a></h2>
+
+        <div class="post_body">
+          {% assign excerptsize = post.excerpt | number_of_words %}
+		  {% if excerptsize <= 100 and excerptsize >= 50 %}
+			<p class="lead">{{ post.excerpt | strip_html }}&hellip;</p>
+          {% else %}
+            <p>{{ post.content | strip_html | truncate:280 }}&hellip;</p>
+          {% endif %}
+        </div>
+
+        <div class="tags">
+            {% for tag in post.tags %}
+                <a class="tag" href="/tag/{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        </div>
+
+    </div>
+{% endfor %}
+
+    <div class="clear"></div>
