@@ -114,18 +114,18 @@ $$
 
 在线广告系统的ROI
 
-- $Investment = \#X \times CPX$
+- $Investment = \sharp X \times CPX$
 - $Return = \sum_{i=1}^T \mu(a_i,u_i,c_i) v(a_i,u_i)=\sum_{i=1}^Te(a_i,u_i,c_i)$
 
 其中，$\mu$ 点击率(CTR)，$v$ 点击价值(bid)，$e$ eCPM。
 
-优化ROI的关键就在于提升eCPM
+优化广告系统ROI的关键就在于提升eCPM（注意不是在说广告主的ROI）
 
 不同的分解对应不同的市场形态：
 
 - CPM市场: 固定eCPM。对media有利，适用于品牌广告。
 - CPC市场: 动态CTR，固定click value。supply估计ctr，而demand估计click value。比如google adwords
-- CPA/CPS/ROI市场: 动态CTR与动态click value。比如淘宝直通车，有统一的模型。
+- CPA/CPS/ROI市场: 动态CTR与动态click value。比如淘宝直通车，统一的转化流程，可以统一的模型。
 
 ### 常用统计模型
 
