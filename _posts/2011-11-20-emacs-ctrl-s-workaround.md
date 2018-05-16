@@ -1,5 +1,5 @@
 ---
-title: 给Emacs找回ctrl-s键
+title: 给终端下的Emacs找回ctrl-s键
 tags: emacs Linux
 ---
 
@@ -10,7 +10,7 @@ tags: emacs Linux
     $ stty -xon
     $ stty stop undef
 
-但是最近公司跳板机上的securecrt居然死活不放弃<kbd>Ctrl</kbd>+<kbd>s</kbd>，怎么设置都会吞掉，真是太恶心人了。于是在它的设置里翻了一下，发觉有个workaround。打开菜单 Session Options → Terminal → Emulation → Mapped Keys，可以利用它内置的键位映射功能，先把<kbd>Ctrl</kbd>+<kbd>s</kbd>绑定到另外一个键位上，可以选择一个Emacs里不常用的键位，比如<kbd>Ctrl</kbd>+<kbd>]</kbd>，发送的字节是 `\035`。如果偶尔要使用<kbd>Ctrl</kbd>+<kbd>]</kbd>，就直接 `M-x abort-recursive-edit` 吧。
+但是最近公司跳板机上的securecrt居然死活不放弃<kbd>Ctrl</kbd>+<kbd>s</kbd>，怎么设置都会吞掉，真是太恶心人了。于是在它的设置里翻了一下，发觉有个workaround。打开菜单 Session Options → Terminal → Emulation → Mapped Keys，可以利用它内置的键位映射功能，先把<kbd>Ctrl</kbd>+<kbd>s</kbd>绑定到另外一个键位上，可以选择一个Emacs里不常用的键位，比如<kbd>Ctrl</kbd>+<kbd>]</kbd>，发送的字节是 `\035`。如果偶尔要使用<kbd>Ctrl</kbd>+<kbd>]</kbd>，就直接 <kbd>Meta</kbd>+<kbd>x</kbd> `abort-recursive-edit` 吧。
 
 然后，可以在Emacs里打开Flow Control的支持：
 

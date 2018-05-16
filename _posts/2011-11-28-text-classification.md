@@ -92,7 +92,7 @@ $$
 其中， $t$ 是具体的每个特征(比如词)， $c$ 是类别号。其他各值的含义如下：
 
 特征t |属于分类c | 不属于分类c | 总计
---|--|--|--
+---|---|---|---
 包含特征t   | A | B | A+B
 不包含特征t | C | D | C+D
 总计 | A+C | B+D | N
@@ -149,7 +149,7 @@ $$
 
 监督学习方法可以分为生成方法和判别方法，所学到的模型分别成为生成模型(generative model)和判别模型(discriminative model)。
 
-生成方法由训练数据学习联合概率分布 $P(X,Y)$ ，然后求得条件概率分布 $P(Y|X)$ 作为预测的模型，即生成模型：
+生成方法由训练数据学习联合概率分布 $P(X,Y)$ ，然后求得条件概率分布 $P(Y\vert X)$ 作为预测的模型，即生成模型：
 
 $$
 P(Y|X) = \frac{P(X,Y)}{P(X)}
@@ -157,7 +157,7 @@ $$
 
 这样的方法之所以称作**生成模型**，是因为模型表示了给定输入 $X$ 产生输出 $Y$ 的生成关系。典型的生成模型有：朴素贝叶斯法和隐马尔科夫模型。
 
-判别方法直接学习决策函数 $f(X)$ 或者条件概率分布 $P(Y|X)$ 作为预测模型，即判别模型。判别方法关心的是对给定的输入 $X$ ，应该预测什么样的输出 $Y$ 。典型的判别模型有：knn、决策树、逻辑回归、EM、SVM、各种boosting算法等等。
+判别方法直接学习决策函数 $f(X)$ 或者条件概率分布 $P(Y\vert X)$ 作为预测模型，即判别模型。判别方法关心的是对给定的输入 $X$ ，应该预测什么样的输出 $Y$ 。典型的判别模型有：knn、决策树、逻辑回归、EM、SVM、各种boosting算法等等。
 
 ### 朴素贝叶斯
 
@@ -170,7 +170,7 @@ P(Y=c_k|X=d) &= \frac{P(Y=c_k)P(X=d|Y=c_k)}{P(X=d)} \\
 \end{align}
 $$
 
-根据 *极大后验概率假设*(MAP, Maximum a posteriori probability hypothesis)，使得后验概率 $P(Y=c_k|X=d)$ 最大的那个类别号误差最小，即得到贝叶斯分类器：
+根据 *极大后验概率假设*(MAP, Maximum a posteriori probability hypothesis)，使得后验概率 $P(Y=c_k\vert X=d)$ 最大的那个类别号误差最小，即得到贝叶斯分类器：
 
 $$
 c_k = \operatorname*{arg\,max}_{c_k} P(Y=c_k)P(X=d|Y=c_k)
@@ -196,11 +196,11 @@ $$
 c_k= \operatorname*{arg\,max}_{c_k} \log P(c_k) + \sum_i \log P(t_i|c_k)
 $$
 
-其中， $P(t_i|c_k)$ 表示分类 $c_k$ 下单个词的条件概率。
+其中， $P(t_i\vert c_k)$ 表示分类 $c_k$ 下单个词的条件概率。
 
 #### 参数估计
 
-可见只要知道先验概率 $P(c_k)$ 和条件概率分布 $P(t_i|c_k)$ 就可以设计出一个贝叶斯分类器。事实上，几乎所有的基于统计的分类问题都是在做这样一件事情：*由训练集数据来估计实际的条件概率分布*。
+可见只要知道先验概率 $P(c_k)$ 和条件概率分布 $P(t_i\vert c_k)$ 就可以设计出一个贝叶斯分类器。事实上，几乎所有的基于统计的分类问题都是在做这样一件事情：*由训练集数据来估计实际的条件概率分布*。
 
 先验概率 $P(c_k)$ 只是一个概率值，容易取其最大似然估计值：
 
@@ -214,7 +214,7 @@ $$
 P(c_k) = \frac{N(c_k)}{\sum_{i=1}^m N(c_i)} \approx \frac{1+N(c_k)}{m + \sum_{i=1}^m N(c_i)}
 $$
 
-条件概率分布 $P(t_i|c_k)$ 服从某种形式分布的概率密度函数，需要从训练集中样本特征的分布情况进行估计。一般的文本分类问题，常假设词的独立概率分布服从[多项式分布](http://en.wikipedia.org/wiki/Multinomial_distribution)，相应模型称作多项式模型(Multinomial model)。在多项式模型中，假定文档 $d$ 由 $l$ 个不同的词项构成，每个词出现的位置与其他词是互相独立的，其独立概率为 $P(t_i|c_k)$ ，每个词可以重复出现，次数即在文档 $d$ 中的 *词频* 记为 $\mathrm{df}_d(t_i)$ 。根据多项式分布的概率公式：
+条件概率分布 $P(t_i\vert c_k)$ 服从某种形式分布的概率密度函数，需要从训练集中样本特征的分布情况进行估计。一般的文本分类问题，常假设词的独立概率分布服从[多项式分布](http://en.wikipedia.org/wiki/Multinomial_distribution)，相应模型称作多项式模型(Multinomial model)。在多项式模型中，假定文档 $d$ 由 $l$ 个不同的词项构成，每个词出现的位置与其他词是互相独立的，其独立概率为 $P(t_i\vert c_k)$ ，每个词可以重复出现，次数即在文档 $d$ 中的 *词频* 记为 $\mathrm{df}_d(t_i)$ 。根据多项式分布的概率公式：
 
 $$
 \begin{align}
@@ -300,12 +300,12 @@ f(k;n,p) &= \Pr(X = k) \\
 \end{align}
 $$
 
-此时， $n=1$ 且 $k \in \brace{0,1}$ 即贝努利分布，可知单个词的条件概率 $P(t_i|c_k)$ ：
+此时， $n=1$ 且 $k \in \brace{0,1}$ 即贝努利分布，可知单个词的条件概率 $P(t_i\vert c_k)$ ：
 
 $$
 \begin{align}
-P(t_i|c_k) &= P(t_i=1|c_k)^{t_i}(1-P(t_i=1|c_k))^{1-t_i} \\
-    &= \left(\frac{P(t_i=1|c_k)}{1-P(t_i=1|c_k)}\right)^{t_i}(1-P(t_i=1|c_k))
+P(t_i|c_k) &= P(t_i=1|c_k)^{t_i}\left(1-P(t_i=1|c_k)\right)^{1-t_i} \\
+    &= \left(\frac{P(t_i=1|c_k)}{1-P(t_i=1|c_k)}\right)^{t_i}\left(1-P(t_i=1|c_k)\right)
 \end{align}
 $$
 
@@ -313,8 +313,8 @@ $$
 
 $$
 \begin{align}
-c_k &= \operatorname*{arg\,max}_{c_k} \log P(c_k) + \sum_{i=1}^n \log(1-P(t_i=1|c_k)) + \sum_{i=1}^n t_i \log \frac{P(t_i=1|c_k)}{1-P(t_i=1|c_k)} \\
-    &= \operatorname*{arg\,max}_{c_k} \log P(c_k) + \sum_{i=1}^n \log P(t_i=1|c_k)
+c_k &= \arg\max_{c_k} \log P(c_k) + \sum_{i=1}^n \log\left(1-P(t_i=1|c_k)\right) + \sum_{i=1}^n t_i \log \frac{P(t_i=1|c_k)}{1-P(t_i=1|c_k)} \\
+    &= \arg\max_{c_k} \log P(c_k) + \sum_{i=1}^n \log P(t_i=1|c_k)
 \end{align}
 $$
 

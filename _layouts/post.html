@@ -21,7 +21,7 @@ layout: base
 
   <div class="tags">
     {% for tag in page.tags %}
-    <a class="tag" href="/tag/{{ tag }}">{{ tag }}</a>
+    <a class="tag" href="{{ site.baseurl }}/tags#{{ tag }}">{{ tag }}</a>
     {% endfor %}
   </div>
 
