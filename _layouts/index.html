@@ -1,29 +1,17 @@
 ---
-layout: base
+layout: layout
 ---
 
-{% assign latest_posts = site.posts | slice: 0, 4 %}
+{% assign __ = site.data.languages[site.language] %}
 
-{% for post in latest_posts %}
-    <div class="post">
-        <h2 class="title"><a href="{{ post.url }}#content">{{ post.title }}</a></h2>
+{% assign posts = site.posts %}
+{% if site.paginate > 0 %}{% assign posts = paginator.posts %}{% endif %}
 
-        <div class="post_body">
-          {% assign excerptsize = post.excerpt | number_of_words %}
-		  {% if excerptsize <= 100 and excerptsize >= 50 %}
-			<p class="lead">{{ post.excerpt | strip_html }}&hellip;</p>
-          {% else %}
-            <p>{{ post.content | strip_html | truncate:280 }}&hellip;</p>
-          {% endif %}
-        </div>
+<section id="posts" class="posts-expand">
+  {% for post in posts %}
+    {% assign is_index = true %}
+    {% include _macro/post.html %}
+  {% endfor %}
+</section>
 
-        <div class="tags">
-            {% for tag in post.tags %}
-                <a class="tag" href="{{ site.baseurl }}/tags#{{ tag }}">{{ tag }}</a>
-            {% endfor %}
-        </div>
-
-    </div>
-{% endfor %}
-
-    <div class="clear"></div>
+{% include _partials/pagination.html %}

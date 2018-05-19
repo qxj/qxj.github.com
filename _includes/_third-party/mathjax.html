@@ -1,0 +1,37 @@
+{% if site.mathjax.enable %}
+  {% if page.layout == 'index' or page.mathjax or site.mathjax.per_page == nil or site.mathjax.per_page == false %}
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {
+       // equationNumbers: { autoNumber: ["AMS"], useLabelIds: true },
+       extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+       Macros: { // \newcommand
+             argmax: ['\\operatorname*{arg\\,max}'],
+             brace: ['{\\left\\lbrace #1 \\right\\rbrace}', 1],
+             braket: ['{\\langle #1 \\rangle}', 1],
+             mat: ['\\mathbf{#1}', 1],
+             tr: ['^\\mathsf{T}'],
+             Abs: ['{\\left\\lvert #2 \\right\\rvert_{\\text{#1}}}', 2, ''],
+             bs: ['\\boldsymbol'],
+             def: ['\\mathrel{\\stackrel{\\mbox{def}}{=}}']
+       }
+     }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="{{ site.mathjax.cdn }}"></script>
+  {% endif %}
+{% endif %}

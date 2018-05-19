@@ -1,0 +1,5 @@
+{% if site.algolia_search.enable %}
+  {% include _third-party/search/algolia-search/dom.html %}
+{% elsif site.local_search.enable %}
+  {% include _partials/search/localsearch.html %}
+{% endif %}
