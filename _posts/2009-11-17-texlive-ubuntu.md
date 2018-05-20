@@ -1,6 +1,6 @@
 ---
 title: 在ubuntu上使用LaTeX
-tags: Linux latex ubuntu
+tags: latex
 ---
 
 拜texlive、ubuntu的开发人员和apt所赐，现在在Linux上使用LaTeX已经变得非常方便了。只需要敲击如下命令就可以安装上latex环境和中文支持了：

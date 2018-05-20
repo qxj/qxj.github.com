@@ -1,6 +1,6 @@
 ---
 title: 增强use-package包管理工具
-tags: emacs
+tags: emacs lisp Programming
 ---
 
 对于一个emacs重度用户，可能最频繁的操作就是去添加一些包，或者修改一些包的配置。那么如果可以很好的管理包的配置，或者能够快速的定位到包的配置，无疑可以很大程度的提高生产力。

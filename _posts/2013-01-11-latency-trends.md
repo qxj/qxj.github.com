@@ -1,6 +1,6 @@
 ---
 title: 一组延时数据
-tags: computer
+tags: 技术
 ---
 
 2010年Jeff Dean在一次[演讲](http://stanford-online.stanford.edu/courses/ee380/101110-ee380-300.asx)中给出了一份所有程序员都应该了解的[数据](https://gist.github.com/2843375)。不过这组数据其实有些过时了，Colin Scott这位有心人重新整理了一份[数据](http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html)，并且还是随时间变化的，对比起来看非常有意思。更新今年的数据如下：

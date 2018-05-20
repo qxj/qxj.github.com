@@ -1,6 +1,6 @@
 ---
 title: 利用ls -Ri查找avc denied文件
-tags: Linux sebsd
+tags: Linux
 ---
 
 sebsd里边的avc报错只会指出inode节点，源类型和目的类型，并不会指示出到底是哪个文件出现acv错误。所以现在有一个方法，可以利用 `ls -Ri` 查询到底哪个inode出错，然后定位到具体的文件。

@@ -1,6 +1,6 @@
 ---
 title: 在WMWare Workstation 5.0下安装redhat 9和hiweed debian
-tags: Windows 工具
+tags: Windows
 ---
 
 ## 网络

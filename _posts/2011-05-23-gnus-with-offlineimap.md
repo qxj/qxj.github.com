@@ -1,6 +1,6 @@
 ---
 title: 在gnus里阅读Gmail邮件(续)
-tags: emacs Linux 工具
+tags: emacs Linux
 ---
 
 在[前文](http://blog.jqian.net/gnus-with-gmail.html)里讲了如何用gnus搭配一些工具收发Gmail，不过fetchmail用来收取POP3邮件，的确有很多缺陷，最重要的是它只能抓取Gmail INBOX里的邮件，对label无能为力，这很让人头疼。不过还好有[offlineimap](https://github.com/nicolas33/offlineimap)这个小工具，而且其中有一部分功能就是专门为Gmail定制的。

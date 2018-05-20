@@ -1,6 +1,6 @@
 ---
 title: C/C++中的UB
-tags: c++
+tags: c++ Programming
 ---
 
 一般而言的UB即未定义行为(Undefined Behavior)，区别于未指定行为(Unspecified Behavior)。简单来说，前者是对bad-formed的程序而言，该程序的写法违反了C/C++标准；后者对well-formed的程序而言，该程序写法没有违反标准，只是标准提供了多种可选方案，但具体实现看编译器。具体可参见C99标准中关于程序behavior的定义。UB对程序来说可能出现任意行为，轻则出现意料之外的结果，重则程序崩溃，应该极力避免。

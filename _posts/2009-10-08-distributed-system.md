@@ -1,6 +1,6 @@
 ---
 title: 分布式系统学习
-tags: linux distributed
+tags: Linux distributed
 ---
 
 ## 一致性问题

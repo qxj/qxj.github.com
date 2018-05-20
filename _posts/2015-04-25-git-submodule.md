@@ -1,6 +1,6 @@
 ---
 title: Git submodule实战
-tags: git
+tags: 工具
 ---
 
 使用git管理的项目开发中，如果碰到公共库和基础工具，可以用submodule来管理。

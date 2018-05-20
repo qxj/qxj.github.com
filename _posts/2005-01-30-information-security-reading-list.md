@@ -1,6 +1,6 @@
 ---
 title: A Reading List in Information Security
-tags: infosec
+tags: reading
 ---
 
 http://www.cs.purdue.edu/homes/ninghui/SecurityReadings.html

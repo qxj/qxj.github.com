@@ -1,6 +1,6 @@
 ---
 title: MAC学习笔记
-tags: sebsd 技术
+tags: 学习
 ---
 
 ## Setup

@@ -1,6 +1,6 @@
 ---
 title: 《Hadoop权威指南》笔记
-tags: hadoop
+tags: hadoop reading
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: 静态绑定和动态绑定
-tags: emacs lisp 技术
+tags: emacs lisp Programming
 ---
 
 在今年4月1日，Emacs24[合并](http://comments.gmane.org/gmane.emacs.devel/138010)了*lexbind*分支，elisp终于也开始支持*词法绑定*(lexical binding，即静态绑定)了。其实词法绑定对于我们今天的人来说是再熟悉不过了，因为目前多数语言都是词法绑定，包括我们熟悉C、C++、Python、Java等等，这导致*动态绑定*(dynamic binding)现在看起来反而比较奇怪。

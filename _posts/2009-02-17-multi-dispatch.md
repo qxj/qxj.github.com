@@ -1,6 +1,6 @@
 ---
 title: C++ Multi-dispatch方法
-tags: c++
+tags: c++ Programming
 ---
 
 Dispatch是运行时多态，是latter-binding技术。

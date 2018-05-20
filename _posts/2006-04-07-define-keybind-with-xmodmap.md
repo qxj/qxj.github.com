@@ -1,6 +1,6 @@
 ---
 title: 用xmodmap捕获键定义
-tags: 工具 Linux
+tags: Linux
 ---
 
 要想在fvwm或者icewm中使用某些快捷键，但是不知道键位的定义怎么办？

@@ -1,6 +1,6 @@
 ---
 title: Antispam资料收集
-tags: antispam 技术
+tags: AI 技术
 ---
 
 ## 调研: 基于bayesian的邮件分类

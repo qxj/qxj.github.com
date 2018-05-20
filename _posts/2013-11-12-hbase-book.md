@@ -1,6 +1,6 @@
 ---
 title: 《Hbase权威指南》阅读笔记
-tags: hbase hadoop
+tags: hadoop reading
 ---
 
 本书代码：https://github.com/larsgeorge/hbase-book

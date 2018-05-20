@@ -1,6 +1,6 @@
 ---
 title: 程序的内存布局
-tags: Linux memory
+tags: Linux memory Programming
 ---
 
 一个32位系统的内存布局一般是这样的：

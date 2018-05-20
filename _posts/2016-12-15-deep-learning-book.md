@@ -1,6 +1,6 @@
 ---
 title: 《深度学习》读书笔记
-tags: deeplearning
+tags: DeepLearning reading
 ---
 
 《[Deep Learning](http://www.deeplearningbook.org/)》Ian Goodfellow, Yoshua Bengio, Aaron Courville

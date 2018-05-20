@@ -1,6 +1,6 @@
 ---
 title: 在Apple Mail里删除Gmail邮件
-tags: mac gmail
+tags: macOS
 ---
 
 Apple Mail和Gmail一直没有很好的搭配工作过。尤其Apple Mail里删除一封邮件的时候，其实在Gmail里只是Archive了这封邮件。这就很烦人，因为有时候你的确是想删除这封邮件，让它从你的视野里消失，而不是在将来搜索的时候，它又蹦到你眼睛里来了。

@@ -1,6 +1,6 @@
 ---
 title: Berkeley DB的使用
-tags: 技术 db
+tags: 技术 Programming
 ---
 
 最近碰到一个项目需要多进程读写一份共享数据，并且共享数据的几个字段需要有倒排索引方便查询，想利用现有数据库快速建立一个原型，于是调研了一下流行的一些nosql数据库。发觉Berkeley DB虽然是一个既古老又流行的开源数据库，但是关于BDB使用的文章却很少，甚至公司DBA对BDB的特性都不太了解……于是花了好几天读了一遍BDB的[references](http://docs.oracle.com/cd/E17076_02/html/programmer_reference/index.html)和[c api](http://docs.oracle.com/cd/E17076_02/html/api_reference/C/frame_main.html)，发觉BDB还是个相当复杂的系统。以下对一些常见问题做一个笔记：

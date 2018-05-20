@@ -1,6 +1,6 @@
 ---
 title: LambdaMART算法分享
-tags: l2r 树模型
+tags: l2r LambdaMART 树模型
 ---
 
 组内分享一下在上家公司做搜索排序时对LambdaMART的理解：

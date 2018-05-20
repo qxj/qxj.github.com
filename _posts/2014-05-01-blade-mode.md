@@ -1,6 +1,6 @@
 ---
 title: blade语法高亮插件
-tags: emacs
+tags: emacs lisp Programming
 ---
 
 转到广点通后，开始使用陈老师(@RoachCock)开发的[blade](https://code.google.com/p/typhoon-blade/wiki/Documentation)工具来统一构建程序代码，可惜在Emacs里暂时还没有相关的mode可以使用，所以就临时开发了一个。这里刚好也对如何去开发一个语言的语法高亮插件做个小结。

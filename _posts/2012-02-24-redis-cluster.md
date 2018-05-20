@@ -1,6 +1,6 @@
 ---
 title: Redis集群小记
-tags: redis hadoop 开发
+tags: redis hadoop Programming
 ---
 
 Redis近两三年变得来非常流行，它的设计很简洁，非常轻量级，至少到目前2.4.x为止，它的定位还是一个单机版的基于内存的kv数据库服务。当然作者Salvatore目前也正在进行Redis Cluster的设计和开发，有兴趣的可以看看这篇[幻灯片](http://redis.io/presentation/Redis_Cluster.pdf)。单机性能毕竟有限，并且作为内存数据库，单机容易因宕机等原因导致中断服务，所以即使没有正式的Redis Cluter，我们常常不得不自己山寨Redis集群来使用。

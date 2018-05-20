@@ -1,6 +1,6 @@
 ---
 title: bblean取代explorer.exe
-tags: Windows 工具
+tags: Windows
 ---
 
 *基于bblean 1.16*

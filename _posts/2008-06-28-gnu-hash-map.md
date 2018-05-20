@@ -1,6 +1,6 @@
 ---
 title: 使用gnu的hash_map实现
-tags: c++ Programming stl
+tags: c++ Programming STL
 ---
 
 这两天写段程序, 想用`hash_map`, 于是跑到 [sgi](http://www.sgi.com/tech/stl/hash_map.html) 上学习了一下, 结果郁闷的发现给出的例子在Mac和Linux下都没法编译通过. 因为`hash_map`并没有进入C++的STL标准, 于是破费了点周折才发现`hash_map`位于 `/usr/include/c++/4.0.0/ext` 目录下, 并且在`__gnu_gxx`的名字空间中. 所以要在Mac或者Linux下使用`hash_map`, 需要加上该名字空间.

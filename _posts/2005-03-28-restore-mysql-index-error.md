@@ -1,6 +1,6 @@
 ---
 title: mysql数据索引文件的修复
-tags: mysql 技术
+tags: 技术
 ---
 
 一般mysql数据库文件损坏都是因为写数据库文件的时候mysql进程退出，导致索引文件出了问题，也就是MYI文件。可以使用 `myisamchk` 或者 `isamchk` 修复。

@@ -1,6 +1,6 @@
 ---
 title: 《POSIX多线程程序设计》读书笔记
-tags: linux Programming
+tags: Linux Programming
 ---
 
 Amdahl法则

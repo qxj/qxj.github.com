@@ -1,6 +1,6 @@
 ---
 title: gnus的烦人提示
-tags: emacs Linux 工具
+tags: emacs
 ---
 
 最近发觉gnus使用过程中总是有些烦人的提示。

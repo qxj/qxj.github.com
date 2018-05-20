@@ -1,6 +1,6 @@
 ---
 title: Google的几个开源库：leveldb、protobuf、gflags
-tags: google db Programming
+tags: google Programming
 ---
 
 [TOC]

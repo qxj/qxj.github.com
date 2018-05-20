@@ -1,6 +1,6 @@
 ---
 title: 使用wget整站下载
-tags: Linux 工具
+tags: Linux
 ---
 
 开源软件里有不少很无敌的工具，比如看电影通吃的mplayer，非交互下载的wget，版本控制的GNU Make，现在用的GNU Emacs，VIM，哎哟――打住打住，先今天用到的 wget。

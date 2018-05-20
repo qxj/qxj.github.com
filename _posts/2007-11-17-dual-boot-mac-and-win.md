@@ -1,6 +1,6 @@
 ---
 title: pc上mac os x和windows双启动
-tags: mac 工具
+tags: macOS
 ---
 
 以前在t40p上尝试装过mac os x for x86，不过当时没有支持firegl 9000的驱动；最近又在t60上尝试了一下，发觉jas版本对新显卡都支持得不错，leopard还有不少小毛病，tiger基本很稳定，系统可用。记录一下遇到的双启动的问题。

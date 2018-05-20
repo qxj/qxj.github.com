@@ -1,6 +1,6 @@
 ---
 title: 在笔记本上安装Gentoo系统
-tags: 工具 Linux
+tags: Linux
 ---
 
 以前用Emacs写的一篇Wiki，记录在Thinkpad T40p上安装Gentoo的经验，现在转到blog上来，另有一份留在[GooglePage](http://junist.googlepages.com/wiki%3Agentooinstallationtutorial)上，当然在Gentoo[官方Wiki](http://gentoo-wiki.com)上有更详尽的说明。

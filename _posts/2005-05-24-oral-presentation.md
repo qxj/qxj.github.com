@@ -1,6 +1,6 @@
 ---
 title: Student Skill
-tags: 技术
+tags: 学习
 ---
 
 ## Practical hints for giving a presentation

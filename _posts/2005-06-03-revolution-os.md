@@ -1,6 +1,5 @@
 ---
 title: Revolution OS
-tags: 技术
 ---
 
 <embed id=VideoPlayback src=http://video.google.com/googleplayer.swf?docid=7707585592627775409&hl=en&fs=true style=width:400px;height:326px allowFullScreen=true allowScriptAccess=always type=application/x-shockwave-flash> </embed>

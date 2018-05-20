@@ -1,6 +1,6 @@
 ---
 title: 协程的简单理解
-tags: coroutine Linux
+tags: coroutine Programming
 ---
 
 最近看到有人讨论[stackless python](http://www.stackless.com/)，看到有部分讲协程在python中的实现，结合Linux的相关知识我这里小结一下。

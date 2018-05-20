@@ -1,6 +1,6 @@
 ---
 title: FreeBSD手记
-tags: freebsd 技术
+tags: 学习
 ---
 
 *- 基于FreeBSD 5.4 -*

@@ -1,6 +1,6 @@
 ---
 title: 在Emacs里使用tumblr
-tags: emacs tumblr lisp
+tags: emacs lisp Programming
 ---
 
 自从[tumblr.com](http://www.tumblr.com)开始支持[markdown语法](http://daringfireball.net/projects/markdown/syntax) 后，它在我眼里就从一只丑小鸭变成了白天鹅。在tumblr上你可以用markdown语法方便的书写；你无需自己去架设网站，搭个LAMP环境去跑wordpress；tumblr.com绑定域名是免费的，wordpress.com绑定域名价格不菲；tumblr有很多漂亮的模板可以选择；最棒的是，它提供了API，这样怎么玩都可以了。总之对比下来，对于个人blog来说，tumblr真是个不错的选择啊。于是我打算从wordpress转移到tumblr了。

@@ -1,6 +1,6 @@
 ---
 title: 在gnus里阅读Gmail邮件
-tags: emacs Linux 工具
+tags: emacs Linux
 ---
 
 几年前曾经写过 [一篇blog](http://neverbow.blogspot.com/2006/09/gnus-works-with-fetchmail.html) ，讲gnus如何搭配fetchmail收取邮件。但是后来由于Gmail实在太好用了，所以完全投靠了web mail，而不再使用客户端。不过，最近由于gmail被墙得半身不遂，gnus又派上了用场。另外，我看到现在网络上关于gnus这个怪物的中文说明五花八门，而且不少无用的内容，遂把原来的blog再重新整理一下，补充一些内容。

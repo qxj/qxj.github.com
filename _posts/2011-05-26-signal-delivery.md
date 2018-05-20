@@ -1,6 +1,6 @@
 ---
 title: 信号的投递
-tags: Linux signal Programming
+tags: Linux Programming
 ---
 
 逛BBS看到[有人](http://www.newsmth.net/bbscon.php?bid=69&id=253512)提到UNP 5.8节关于信号投递已经不与时俱进了，说记得信号是可以嵌套的。
