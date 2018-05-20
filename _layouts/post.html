@@ -36,3 +36,74 @@ layout: base
   </div>
 
 </article>
+
+<div id="outline-wrapper">
+  <nav id="outline">
+  <div class="outline-toggle">
+    <div class="outline-toggle-line-wrap">
+      <span class="outline-toggle-line outline-toggle-line-first"></span>
+      <span class="outline-toggle-line outline-toggle-line-middle"></span>
+      <span class="outline-toggle-line outline-toggle-line-last"></span>
+    </div>
+  </div>
+  <ul class="outline-body"></ul>
+  </nav>
+</div>
+
+
+
+<script type="text/javascript">
+  $(document).ready( function() {
+
+    $(window).scroll( function() {
+        if ($(window).scrollTop() > $('#outline-wrapper').offset().top)
+            $('#outline').addClass('floating');
+        else
+            $('#outline').removeClass('floating');
+    } );
+
+} );
+</script>
+
+
+<script type="text/javascript">
+    function generateOutline (selector) {
+        var P = $('div.post-content'),a,n,t,l,i,c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#"+$(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
+            l = $('<li class="'+n+'_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateOutline(".outline-body");
+
+    // toggle side outline
+    $(".outline-toggle").click((function(e){
+        e.preventDefault();
+        $('.outline-wrapper').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     */
+    async('http://davist11.github.io/jQuery-One-Page-Nav/jquery.nav.js', function () {
+        $('.outline-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null
+        });
+    });
+</script>
