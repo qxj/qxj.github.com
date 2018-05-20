@@ -1,10 +1,17 @@
 {% if site.disqus.enable %}
 <link rel="stylesheet" href="http://disqus.jqian.net/dist/iDisqus.min.css" />
 <script src="http://disqus.jqian.net/dist/iDisqus.min.js"></script>
+
+{% comment %}
+Reference:
+- disqus-php-api @github
+- _include/_partials/comments.html
+{% endcomment %}
+
 <!-- <div id="comment" class="comments"></div> -->
 <!-- <ul id="popular-posts"></ul> -->
 <script>
-var disq = new iDisqus('disqus_thread', {
+var disq = new iDisqus('disqus_comment', {
     forum: 'jqian',
     site: 'http://blog.jqian.net',
     api: 'http://disqus.jqian.net/api',
