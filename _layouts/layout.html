@@ -19,7 +19,9 @@
 <head>
   {% include _partials/head.html %}
   <title>{{ title }}</title>
-  {% include _third-party/analytics/index.html %}
+  {% if jekyll.environment == 'production' %}
+    {% include _third-party/analytics/index.html %}
+  {% endif %}
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang | default: page.language | default: site.language }}">
@@ -82,10 +84,12 @@
   {% if page.layout == "post" %}
     {% include _third-party/comments/index.html %}
   {% endif %}
+  {% if jekyll.environment == 'production' %}
+    {% include _third-party/analytics/lean-analytics.html %}
+    {% include _third-party/seo/baidu-push.html %}
+    {% include _third-party/rating.html %}
+  {% endif %}
   {% include _third-party/search/index.html %}
-  {% include _third-party/analytics/lean-analytics.html %}
-  {% include _third-party/seo/baidu-push.html %}
-  {% include _third-party/rating.html %}
   {% include _third-party/mathjax.html %}
   {% include _third-party/scroll-cookie.html %}
   {% include _third-party/exturl.html %}
