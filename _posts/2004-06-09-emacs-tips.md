@@ -65,4 +65,4 @@ tags: emacs
 
 使用命令`flush-lines`。
 
-输入匹配空行的正则式 `^$，回车<kbd>RET</kbd>。
+输入匹配空行的正则式 `^$`，回车<kbd>RET</kbd>。
