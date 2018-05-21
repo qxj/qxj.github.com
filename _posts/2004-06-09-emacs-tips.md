@@ -3,6 +3,8 @@ title: Emacs使用技巧
 tags: emacs
 ---
 
+请参考[我的Emacs配置](https://github.com/qxj/jqian/tree/my_config/emacsconf)。
+
 ## 重置大写锁定键
 
 参考[Emacswiki](http://www.emacswiki.org/emacs/MovingTheCtrlKey)，在X Window下设置 `~/.xmodmap`，把<kbd>Caps Lock</kbd>设置成<kbd>Ctrl</kbd>键；如果需要交换按键，把注释取消：
@@ -53,16 +55,3 @@ tags: emacs
     mode: text
     coding: chinese-gbk
     End:
-
-## 批量替换文本
-使用命令`find-dired`。
-
-第一个参数指定要批量处理的目录，第二个参数指定find命令的参数，比如 `-name "*.h" -o -name "*.cpp"`，回车，emacs会显示匹配的文件列表。
-
-按<kbd>m</kbd>键选中要替换的文件，或按<kbd>t</kbd>选中全部；然后，按<kbd>Q</kbd>输入要替换的字符串或者正则式，比如匹配整个字符串 `\<DEBUG\>`；回车<kbd>RET</kbd>，逐一替换。
-
-## 删除所有空行
-
-使用命令`flush-lines`。
-
-输入匹配空行的正则式 `^$`，回车<kbd>RET</kbd>。
