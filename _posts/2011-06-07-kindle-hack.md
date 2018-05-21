@@ -47,7 +47,7 @@ tags: kindle Hack
 
 ### 模拟浏览器程序
 
-整体思路就是编个程序*kindlepull*，模拟内置浏览器的请求来通过3G访问互联网资源。本来想借助[libcurl](http://curl.haxx.se/libcurl/c/)来封装HTTP协议，可惜只能通过[CURLOPT_URL](http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTURL)来指定访问的URL；而在这里需要通过Amazon proxy，待访问的url和请求的socket得分离开，所以没法偷懒了，只能去读HTTP协议，然后写socket程序了。
+整体思路就是编个程序[kindlepull](https://github.com/qxj/Kindle-Pull)，模拟内置浏览器的请求来通过3G访问互联网资源。本来想借助[libcurl](http://curl.haxx.se/libcurl/c/)来封装HTTP协议，可惜只能通过[CURLOPT_URL](http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTURL)来指定访问的URL；而在这里需要通过Amazon proxy，待访问的url和请求的socket得分离开，所以没法偷懒了，只能去读HTTP协议，然后写socket程序了。
 
 不过HTTP协议当然也不用全部实现，只需根据返回的header处理两种情况：
 
@@ -60,7 +60,7 @@ tags: kindle Hack
 
 我找了两份arm编译器[Code Sourcery](http://www.codesourcery.com/sgpp/lite/arm)和[ScratchBox](http://scratchbox.org/)，都可以用来编译arm程序。不过为了避免kindle上的libstdc++.so过老，最后链接程序的时候，我还是加了`-static`做静态链接，发觉可以正确运行。
 
-这里有我编译好的[程序](https://github.com/downloads/JulQian/Kindle-Pull/kindlepull_0.1.tgz)，建议放到`/mnt/us/kindlepull/`目录，便于维护。
+这里有我编译好的[程序](https://github.com/downloads/qxj/Kindle-Pull/kindlepull_0.1.tgz)，建议放到`/mnt/us/kindlepull/`目录，便于维护。
 
 ### 运行程序
 
@@ -68,7 +68,7 @@ tags: kindle Hack
 
 ### 在vps上搭建mobi服务程序
 
-除了dxg上运行的*kindlepull*外，还得一个外部服务*FakeWhisper*来协助生成mobi文档，这个随便用PHP或者Python编写一个Web服务就行了；而mobi转换程序可以直接调用Amazon提供的[kindlegen](http://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000234621)。
+除了dxg上运行的*kindlepull*外，还得一个外部服务[FakeWhisper](https://github.com/qxj/Fake-Whisper)来协助生成mobi文档，这个随便用PHP或者Python编写一个Web服务就行了；而mobi转换程序可以直接调用Amazon提供的[kindlegen](http://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000234621)。
 
 目前我的这个*FakeWhisper*是这样设计的，整个流程超简单：
 
@@ -79,3 +79,10 @@ tags: kindle Hack
 
 - 发送邮件到某个特定邮箱，然后*FakeWhisper*从这个邮箱抓取文档并转换，
 - *FakeWhisper*定时抓取一些rss文档并转换。
+
+## 项目
+
+两个项目在我Github上：
+
+- [KindlePull](https://github.com/qxj/Kindle-Pull)
+- [FakeWhisper](https://github.com/qxj/Fake-Whisper)
