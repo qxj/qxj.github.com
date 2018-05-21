@@ -468,7 +468,7 @@ google_analytics: UA-1819306-7
 yandex_site_verification:
 
 # Baidu Analytics ID
-baidu_analytics:
+baidu_analytics: 1c0f5afad15b6d284e48559af2a0c2ed
 
 # CNZZ count
 cnzz_siteid:
@@ -520,7 +520,7 @@ tencent_mta:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # ~~~~~~~~~~~~~~~~
 # Search
