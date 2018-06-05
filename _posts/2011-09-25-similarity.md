@@ -170,7 +170,7 @@ uint64_t simhash64(const DocVector& d)
     }
     return ret;
 }
-``
+```
 
 ## 主题模型
 
