@@ -3,7 +3,6 @@ title: 概率分布汇总
 tags: math
 ---
 
-http://blog.csdn.net/a819825294/article/details/51674180
 
 [TOC]
 
@@ -159,7 +158,7 @@ def poisson(mu):
     return k
 ```
 
-参考：从 $uniform(1)$ 产生任意分布 https://en.wikipedia.org/wiki/Pseudo-random_number_sampling
+参考：[从 $uniform(1)$ 产生任意分布](https://en.wikipedia.org/wiki/Pseudo-random_number_sampling)
 
 
 ## 连续分布
@@ -191,13 +190,11 @@ $$
 
 指数分布、$\chi^2$分布都是特殊的Gamma分布。
 
-参考：[知乎 | 怎么理解Gamma分布？](https://www.zhihu.com/question/34866983)
+参考：[怎么理解Gamma分布？](https://www.zhihu.com/question/34866983)
 
 ### Beta分布
 
-http://mathworld.wolfram.com/BetaDistribution.html
-
-区别于随机变量的概率分布，Beta分布是概率的概率分布，即当我们不清楚某概率分布的情况下，描述该概率可能的取值情况。
+区别于随机变量的概率分布，[Beta分布](http://mathworld.wolfram.com/BetaDistribution.html)是概率的概率分布，即当我们不清楚某概率分布的情况下，描述该概率可能的取值情况。
 
 直白的说，Beta分布是融合了先验的二项分布（参数$\alpha$和$\beta$对应随机变量取0和1的先验次数）。二项分布为*后验分布*，Beta分布为*先验分布*，而且由于它们函数形式相同，也称Beta分布是二项分布的[共轭先验](https://en.wikipedia.org/wiki/Conjugate_prior)分布。
 
@@ -212,11 +209,11 @@ $$
 $$
 
 
-Beta 分布背后的含义：http://stats.stackexchange.com/a/47782/67705
+[Beta 分布背后的含义](http://stats.stackexchange.com/a/47782/67705)
 
 举例：我们做一个抛硬币实验，估算硬币正面向上的概率$\pi$。我们假设$\pi$的先验满足 $p(\pi)=\text{Beta}(\alpha,\beta)$
-- 每观察到一次正面向上：$p(\pi|X=1)=\text{Beta}(\alpha+1,\beta)$
-- 每观察到一次反面向上：$p(\pi|X=0)=\text{Beta}(\alpha,\beta+1)$
+- 每观察到一次正面向上：$p(\pi\vert X=1)=\text{Beta}(\alpha+1,\beta)$
+- 每观察到一次反面向上：$p(\pi\vert X=0)=\text{Beta}(\alpha,\beta+1)$
 
 假设观察到正面向上81次，反面向上219次，则$\hat{\pi}=81/(81+219)=0.27$。
 

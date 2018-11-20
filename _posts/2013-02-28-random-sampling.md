@@ -1,9 +1,7 @@
 ---
-title: 随机采样算法 sampling
+title: 随机采样算法
 tags: math
 ---
-
-参考：https://en.wikipedia.org/wiki/Pseudo-random_number_sampling
 
 [TOC]
 
@@ -12,16 +10,15 @@ $$
 \newcommand{\y}{\boldsymbol{y}}
 $$
 
-统计学中，有时我们需要获得某一个分布的样本， 比如我们想获得 [0,1] 之间几个均匀随机数， 就可以说对 [0,1] 之间的均匀分布进行**采样**。
+统计学中，有时我们需要获得某一个分布的样本， 比如我们想获得 [0,1] 之间几个均匀随机数， 就可以说对 [0,1] 之间的均匀分布进行**[采样](https://en.wikipedia.org/wiki/Pseudo-random_number_sampling)**。
 
-对于特定的分布， 有的我们可以从获得服从这个分布的样本， 比如一条街上每天交通事故的数量服从泊松分布， 我们把每天的数据收集起来，就可以得到服从这个分布的样本集。但有时直接采样有困难， 或者成本太高。所以，我们想办法用计算机来模拟采样。
-http://blog.csdn.net/xianlingmao/article/details/7768833
+对于特定的分布， 有的我们可以从获得服从这个分布的样本， 比如一条街上每天交通事故的数量服从泊松分布， 我们把每天的数据收集起来，就可以得到服从这个分布的样本集。但有时直接采样有困难， 或者成本太高。所以，我们想办法用计算机来[模拟采样](http://blog.csdn.net/xianlingmao/article/details/7768833)。
 
-## 连续分布
-### 独立样本
+
+## 独立样本
 参考：http://bindog.github.io/blog/2015/05/20/different-method-to-generate-normal-distribution/
 
-#### 拒绝采样（Rejection sampling）
+### 拒绝采样（Rejection sampling）
 http://blog.csdn.net/bemachine/article/details/12584971
 
 【注意】需要已知目标分布pdf。
@@ -40,7 +37,7 @@ http://blog.csdn.net/bemachine/article/details/12584971
 
 不过在高维的情况下，拒绝采样会出现两个问题，第一是合适的$q$分布比较难以找到，第二是很难确定一个合理的$k$值。这两个问题会造成图中灰色区域的面积变大，从而导致拒绝率很高，无用计算增加。
 
-#### 反变换法（Inverse CDF）
+### 反变换法（Inverse CDF）
 
 【注意】需要已知目标分布cdf。
 
@@ -75,7 +72,7 @@ P(F^{-1}(U) \le x) & =P(U \le F(x)) \\
 $$
 
 
-### 相关样本
+## 相关样本
 
 参考：
 - https://cos.name/2013/01/lda-math-mcmc-and-gibbs-sampling/
@@ -84,12 +81,7 @@ $$
 
 解决rejection sampling在高维空间碰到的问题。
 
-#### Markov Chain
-
-参考：
-- 《概率论基础教程》Ross，第9.2章 马尔可夫链
-- 《随机过程》Ross，第4章 马尔可夫链
-- 《Machine Learning: An Algorithmic Perspective》 Chapter 14. MCMC
+### Markov Chain
 
 符号：
 - 时刻$t$随机变量$X_t$
@@ -98,15 +90,15 @@ $$
 
 Markov链体现的是状态空间的转换关系，下一个状态只取决于当前的状态。
 
-【Markov链】考虑只取有限个值的随机过程$\{X_t,t=0,1,2\cdots\}$，若$X_t=i$，即在**时刻**$t$处于**状态**$i$，则下一时刻$t+1$将处于状态$j$的概率是**固定**的$P_{ij}$，即对一切状态有
+Markov链
+: 考虑只取有限个值的*随机过程* $\{X_t,t=0,1,2\cdots\}$，若$X_t=i$，即在*时刻*$t$处于*状态*$i$，则下一时刻$t+1$将处于状态$j$的概率是*固定*的$P_{ij}$，即对一切状态有
 
 $$
 P(X_{t+1}=j|X_t=i,X_{t-1}=i_{t-1},\cdots,X_1=i_1,X_0=i_0) = P_{ij}
 $$
 
-这样的**随机过程**称为Markov链。
-
-【收敛定理】如果一个非周期Markov链具有**转移概率矩阵**$P$，且它的任何两个状态是**连通**的，那么$\displaystyle \lim_{n\to \infty}P_{ij}^n$存在且与之前状态$i$无关，记$\displaystyle \lim_{n\to \infty} P_{ij}^n=\pi(j)$。
+收敛定理
+: 如果一个非周期Markov链具有*转移概率矩阵*$P$，且它的任何两个状态是*连通*的，那么$\displaystyle \lim_{n\to \infty}P_{ij}^n$存在且与之前状态$i$无关，记$\displaystyle \lim_{n\to \infty} P_{ij}^n=\pi(j)$。
 
 我们有
 
@@ -128,7 +120,8 @@ $$
 
 $\pi$称为Markov链的**平稳分布**。其中，$\pi(i)$表示状态$i$的概率分布。
 
-【细致平稳条件】（Detailed Balance Condition）对于任何两个状态$i,j$ 从 $i$ 转移出去到$j$ 而丢失的概率质量，恰好会被从 $j$ 转移回 $j$ 的概率质量补充回来，此时$\pi$达到平稳分布。
+细致平稳条件（Detailed Balance Condition）
+: 对于任何两个状态$i,j$ 从 $i$ 转移出去到$j$ 而丢失的概率质量，恰好会被从 $j$ 转移回 $j$ 的概率质量补充回来，此时$\pi$达到平稳分布。
 
 $$
 \pi(i)P_{ij} = \pi(j)P_{ji} \quad\quad \text{for all} \quad i,j  \tag{1}
@@ -159,7 +152,7 @@ $$
 
 所以，$X_n,X_{n+1},X_{n+2},\cdots \sim \pi$ 都是同分布的随机变量，当然他们并不独立。即对这些变量采样得到的状态$k$服从分布$\pi$。
 
-#### MCMC
+### MCMC
 
 【注】需要已知pdf，该pdf的积分难求。
 
@@ -168,10 +161,9 @@ $$
 改变一下符号：
 
 - 用$p(i)$替代$\pi(i)$表示状态$i$的概率分布
-- 用$q(i,j)$替代$P_{ij}$表示状态$i$到$j$的转移概率，也可以写作$q(j|i)$或$q(i->j)$
+- 用$q(i,j)$替代$P_{ij}$表示状态$i$到$j$的转移概率，也可以写作$q(j\vert i)$或$q(i->j)$
 
 显然，通常情况下，细致平稳条件不成立，
-
 $$
 p(i) q(i,j) \neq p(j) q(j,i)
 $$
@@ -191,12 +183,12 @@ $$
 
 1. 初始化Markov链初始状态 $X_0=x_0$
 2. 对时刻 $t=0,1,2,\cdots$，循环以下过程采样：
-   - 第$t$时刻Markov链状态为$X_t=x_t$，采样新状态$y\sim q(x|x_t)$
+   - 第$t$时刻Markov链状态为$X_t=x_t$，采样新状态$y\sim q(x\vert x_t)$
    - 从均匀分布采样$u\sim \text{Uniform}(0, 1)$
-   - 如果$u\lt \alpha(x_t,y) = p(y)q(x_t|y)$，则接受转移$x_t\to y$，即$X_{t+1}=y$
+   - 如果$u\lt \alpha(x_t,y) = p(y)q(x_t\vert y)$，则接受转移$x_t\to y$，即$X_{t+1}=y$
    - 否则，不接受转移，即$X_{t+1}=x_t$
 
-#### Metropolis-Hasting算法
+### Metropolis-Hasting算法
 
 默认MCMC算法里，接受率$\alpha$值偏小，会导致拒绝率过高。可以把细致平稳条件$(2)$式中的$\alpha(i,j)$和$\alpha(j,i)$同比例放大，既不会破坏细致平稳条件，而且可以提高跳转中的接受率，从而得到Metropolis-Hastings算法。
 
@@ -208,9 +200,9 @@ $$
 
 1. 初始化Markov链初始状态 $X_0=x_0$
 2. 对时刻 $t=0,1,2,\cdots$，循环以下过程采样：
-   - 第$t$时刻Markov链状态为$X_t=x_t$，采样新状态$y\sim q(x|x_t)$
+   - 第$t$时刻Markov链状态为$X_t=x_t$，采样新状态$y\sim q(x\vert x_t)$
    - 从均匀分布采样$u\sim \text{Uniform}(0, 1)$
-   - 如果$u\lt \alpha(x_t,y) = \min\left\{\frac{p(y)q(x_t|y)}{p(x_t)q(y|x_t)},1\right\}$，则接受转移$x_t\to y$，即$X_{t+1}=y$
+   - 如果$u\lt \alpha(x_t,y) = \min\left\{\frac{p(y)q(x_t\vert y)}{p(x_t)q(y\vert x_t)},1\right\}$，则接受转移$x_t\to y$，即$X_{t+1}=y$
    - 否则，不接受转移，即$X_{t+1}=x_t$
 
 以上算法里的$x$不要求是一维的，对高维空间$p(\x)$，如果满足细致平稳条件
@@ -226,17 +218,17 @@ $$
 - https://github.com/tback/MLBook_source/blob/master/14%20MCMC/MH.py
 - https://gist.github.com/qxj/66d42234f58d519b2511ed2892cf7411
 
-#### Gibbs sampling
+### Gibbs sampling
 
 对于高维的情形，由于接受率 $\alpha$ 的存在(通常 $\alpha\lt 1$), 以上 Metropolis-Hastings 算法的效率仍然不够高。能否找到一个转移矩阵$Q$使得接受率 $\alpha=1$ 呢？
 
-![Gibbs sampling](http://image.jqian.net/sampling-rejection.png)
+![Gibbs sampling](http://image.jqian.net/sampling-gibbs.png)
 
-假设两个随机变量$x$和$y$，在$x=x_1$这条平行于 $y$ 轴的直线上，如果使用条件分布 $p(y|x_1)$ 做为任何两个点之间的转移概率，那么任何两个点之间的转移满足细致平稳条件。同样的，如果我们在 $y=y_1$ 这条直线上任意取两个点 $A(x_1,y_1),C(x_2,y_1)$，也一样。
+假设两个随机变量$x$和$y$，在$x=x_1$这条平行于 $y$ 轴的直线上，如果使用条件分布 $p(y\vert x_1)$ 做为任何两个点之间的转移概率，那么任何两个点之间的转移满足细致平稳条件。同样的，如果我们在 $y=y_1$ 这条直线上任意取两个点 $A(x_1,y_1),C(x_2,y_1)$，也一样。
 
 $$
-p(A)p(y_2|x_1) = p(B)p(y_1|x_1) \\
-p(A)p(x_2|y_1) = p(C)p(x_1|y_1)
+p(A)p(y_2\vert x_1) = p(B)p(y_1\vert x_1) \\
+p(A)p(x_2\vert y_1) = p(C)p(x_1\vert y_1)
 $$
 
 于是，可以构造出平面上任意两点之间的转移概率矩阵$Q$：
@@ -261,12 +253,12 @@ $$
 
 1. 随机初始化$\{x_i: i=1,\cdots,n\}$
 2. 对时刻$t=0,1,2,\cdots$ 按各维度循环采样
-   - $x_1^{(t+1)}\sim p(x_1|x_2^{(t)},x_3^{(t)},\cdots,x_n^{(t)})$
-   - $x_2^{(t+1)}\sim p(x_2|x_1^{(t+1)},x_3^{(t)},\cdots,x_n^{(t)})$
+   - $x_1^{(t+1)}\sim p(x_1\vert x_2^{(t)},x_3^{(t)},\cdots,x_n^{(t)})$
+   - $x_2^{(t+1)}\sim p(x_2\vert x_1^{(t+1)},x_3^{(t)},\cdots,x_n^{(t)})$
    - $\cdots$
-   - $x_j^{(t+1)}\sim p(x_j|x_1^{(t+1)},\cdots,x_{j-1}^{(t+1)},x_{j+1}^{(t)},\cdots,x_n^{(t)})$
+   - $x_j^{(t+1)}\sim p(x_j\vert x_1^{(t+1)},\cdots,x_{j-1}^{(t+1)},x_{j+1}^{(t)},\cdots,x_n^{(t)})$
    - $\cdots$
-   - $x_n^{(t+1)}\sim p(x_1|x_n^{(t+1)},x_2^{(t+1)},\cdots,x_{n-1}^{(t+1)}) $
+   - $x_n^{(t+1)}\sim p(x_1\vert x_n^{(t+1)},x_2^{(t+1)},\cdots,x_{n-1}^{(t+1)}) $
 
 参考代码：
 - https://github.com/tback/MLBook_source/blob/master/14%20MCMC/Gibbs.py

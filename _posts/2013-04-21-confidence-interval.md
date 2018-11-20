@@ -3,8 +3,6 @@ title: 置信区间估计
 tags: math
 ---
 
-参考：《数理统计学教程》陈希孺，3. 假设检验 4. 区间估计
-
 问题示例：
 
 - 已知样本数据，求解置信区间
@@ -15,31 +13,25 @@ tags: math
 
 【例】根据某城市一次900户随机抽样调查结果，被调查家庭在过去一年中耐用消费品的购买额均值为450元。根据经验估计标准差为120，如果置信系数为0.95且误差在4.5户之内，问样本量应该确定为多少？
 
-统计推断
-多重检验（P值校正）
-假设检验（P值）
-置信区间（Confidence interval）
-
-https://onlinecourses.science.psu.edu/stat414/book/export/html/245
-
-----
-
 ## 基本概念
 
-虚拟假设、零假设、H0、Ho（Null hypothesis）
-对立假设、折备假设、H1、Ha（Alternative hypothesis）
+- 虚拟假设、零假设、H0、Ho（Null hypothesis）
+- 对立假设、折备假设、H1、Ha（Alternative hypothesis）
 
-一型错误（Type I error）  FP
-二型错误（Type II error）  FN
+- 一型错误（Type I error）  FP
+- 二型错误（Type II error）  FN
 
 犯一型错误的概率，称为*显著性水平（Significance level）*：
-α  = P(Type I error) = P(reject H0 | H0 is true)
+
+$$α  = P(\mbox{Type I error}) = P(\mbox{reject H0} | \mbox{H0 is true})$$
 
 犯二型错误的概率：
-β = P(Type II error) = P(accept H0 | H0 is false)
+
+$$β = P(\mbox{Type II error}) = P(\mbox{accept H0} | \mbox{H0 is false})$$
 
 在一定α下，犯二型错误的概率，称为*检验的势（power）*：
-π = P(reject H0 | Ha is true)
+
+$$π = P(\mbox{reject H0} | \mbox{H1 is true})$$
 
 ## 统计推断
 
@@ -48,6 +40,7 @@ https://onlinecourses.science.psu.edu/stat414/book/export/html/245
 二者都属于*统计推断（Statistical Inference）*——利用样本的数据得到*样本统计量（statistic）*，然后做出对*总体参数（parameter）*的推断。
 
 不同之处在于：
+
 用统计量推断参数时，如果*参数未知*，则这种推断叫*参数估计（点估计与区间估计）*——用统计量估计未知的参数；
 如果*参数已知（或假设已知）*，需要利用统计量检验已知的参数是否可靠，此时的统计推断即为*假设检验*。
 
@@ -60,7 +53,6 @@ https://onlinecourses.science.psu.edu/stat414/book/export/html/245
 ![P value](http://image.jqian.net/confidence-interval-p-value.png)
 
 
-
 ## 区间估计
 
 区间估计是在一定的置信系数的保证下，根据统计量得到一个取值范围去估计总体的参数。
@@ -71,11 +63,14 @@ $$
 
 其中，$(\hat{\theta}_1 ,\hat{\theta}_2$ 为$\theta$ 的置信区间，$1-\alpha$为置信度，$\hat{\theta}_1$和$\hat{\theta}_2$分别为置信下限和置信下限。
 
-置信系数：$1-\alpha$使人相信区间包含总体均值的概率，一般取 0.95/0.90/0.99，说明估计的把握性的大小。
+置信系数
+: $1-\alpha$使人相信区间包含总体均值的概率，一般取 0.95/0.90/0.99，说明估计的把握性的大小。
 
-置信区间：在一定概率的保证下，包含总体均值的区间，区间的宽度说明精度的大小。
+置信区间
+: 在一定概率的保证下，包含总体均值的区间，区间的宽度说明精度的大小。
 
-临界值：置信区间的上限和下限。
+临界值
+: 置信区间的上限和下限。
 
 ### 示例：AB实验指标置信区间估计
 
@@ -108,8 +103,15 @@ $$
 (\bar{X}_1-\bar{X}_2) + z_\frac\alpha 2 \sqrt{\frac{\sigma_1^2}{n_1} +\frac{\sigma_2^2}{n_2}} \right]
 $$
 
-继续解释：返购率、点击率等等都可以建模成Bernoulli实验，均值即参数$p=UV/N$，已知Bernoulli分布的方差是$p(1-p)$，代入上式。
+继续解释：点击率等都可以建模成Bernoulli实验，均值即参数$p=UV/N$，已知Bernoulli分布的方差是$p(1-p)$，代入上式。
 
-----
+## 参考
 
-EOF
+- 《数理统计学教程》陈希孺，3. 假设检验 4. 区间估计
+
+统计推断
+多重检验（P值校正）
+假设检验（P值）
+置信区间（Confidence interval）
+
+https://onlinecourses.science.psu.edu/stat414/book/export/html/245

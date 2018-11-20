@@ -3,10 +3,6 @@ title: 线性代数备忘
 tags: math
 ---
 
-推荐视频：《[线性代数的本质](http://www.bilibili.com/video/av6731067)》
-推荐课程：《[麻省理工公开课：线性代数](http://open.163.com/special/opencourse/daishu.html)》
-推荐教材：《线性代数及其应用》
-
 [TOC]
 
 ## 线性相关、线性无关（Linear independence）
@@ -32,9 +28,7 @@ tags: math
 一个矩阵A的列秩是A的线性无关的纵列的极大数目。类似地，行秩是A的线性无关的横行的极大数目。
 矩阵的列秩和行秩总是**相等**的，因此它们可以简单地称作矩阵A的秩，通常表示为r(A)或rank(A)。
 
-矩阵行秩=列秩，关键在于理解“矩阵的秩等于其转置矩阵的秩”因为矩阵的行列在转置后会相互转化；至于为什么矩阵的秩等于其列秩的理解关键在于：“有限次的初等行变换不改变矩阵列向量之间的线性相关性”这一定理。
-
-https://www.zhihu.com/question/25524378
+[矩阵行秩=列秩](https://www.zhihu.com/question/25524378)，关键在于理解“矩阵的秩等于其转置矩阵的秩”因为矩阵的行列在转置后会相互转化；至于为什么矩阵的秩等于其列秩的理解关键在于：“有限次的初等行变换不改变矩阵列向量之间的线性相关性”这一定理。
 
 秩就是可表达的真实维数，也可理解为独立向量的个数（正交基）。
 
@@ -53,7 +47,6 @@ https://www.zhihu.com/question/25524378
 一个$n \times n$ 矩阵A的迹是其主对角线上各元素之和。
 
 用泛函分析的语言来说 $\mbox{tr}(A\tr B)$ 是矩阵A、B的内积。
-https://zhuanlan.zhihu.com/p/24709748
 
 ## 线性变换
 
@@ -73,14 +66,18 @@ Aξ = λξ  : 在A变换的作用下，向量ξ 仅仅在尺度上变为原来�
 
 求解线性变化A的特征向量和特征值：
 
-Ax = λx
-⇒ I·Ax = I·λx
-⇒ Ax = (λI)x
+$$
+Ax = λx \\
+⇒ I·Ax = I·λx \\
+⇒ Ax = (λI)x \\
 ⇒ (A - λI)x = 0
+$$
 
 根据线性方程组理论，若上式x有非零解，则矩阵(A - λI)的行列式为0：
 
+$$
 |A - λI| = 0
+$$
 
 解该方程组可以求得特征值λ，然后将λ代入方程组 (A - λI)x = 0 可以求得特征向量x。
 
@@ -107,7 +104,7 @@ $$ f(\mathbf{x})=\mathbf{x}\tr A\mathbf{x} $$
 ## 正交矩阵（Orthogonal matrix）
 
 正交矩阵是方块矩阵Q，它的转置矩阵是它的逆矩阵： $Q\tr = Q^{-1}$ 或者 $QQ\tr = I$， 其中I为单位矩阵。
-如果正交矩阵的行列式为 +1，則我們稱之為特殊正交矩阵： $\ABs{Q} = +1$
+如果正交矩阵的行列式为 +1，則我們稱之為特殊正交矩阵： $\Abs{Q} = +1$
 
 ## 转置矩阵（Transpose）
 
@@ -123,8 +120,9 @@ $$ f(\mathbf{x})=\mathbf{x}\tr A\mathbf{x} $$
 給定一个$n$階方陣$A$，若存在$n$階方陣$B$，使得 $AB = BA = I$，其中 $I$ 为$n$階单位矩阵，則稱$A$是可逆的，且$B$是$A$的逆矩陣，記作 $A^{-1}$。
 
 求解逆矩阵的方法：
-https://www.mathsisfun.com/algebra/matrix-inverse.html
-http://www.mathwords.com/i/inverse_of_a_matrix.htm
+- https://www.mathsisfun.com/algebra/matrix-inverse.html
+- http://www.mathwords.com/i/inverse_of_a_matrix.htm
+
 从Adjoint method可以看出，如果行列式$\Abs{A}=0$，则分母为0无意义，也就是不存在逆矩阵。
 
 ## 奇异矩阵（Singular matrix）
@@ -149,9 +147,7 @@ http://www.mathwords.com/i/inverse_of_a_matrix.htm
 
 ## 内积（Inner product）、点积
 
-参考：[内积的定义](https://ccjou.wordpress.com/2010/01/27/%E5%85%A7%E7%A9%8D%E7%9A%84%E5%AE%9A%E7%BE%A9/)
-
-向量**内积**$x\cdot y$代表两个向量对应坐标值相乘后相加，得到的是一个**实数**，数值上等于两向量长度之积乘以夹角的余弦值，即向量$x$在$y$上的**投影**，反之亦然。
+向量**[内积](https://ccjou.wordpress.com/2010/01/27/%E5%85%A7%E7%A9%8D%E7%9A%84%E5%AE%9A%E7%BE%A9/)** $x\cdot y$代表两个向量对应坐标值相乘后相加，得到的是一个**实数**，数值上等于两向量长度之积乘以夹角的余弦值，即向量$x$在$y$上的**投影**，反之亦然。
 
 几何意义：内积可以求两向量夹角。如果两向量*内积为零*，则两向量*垂直*；如果为*正值*，则*方向大致相同*；如果为*负值*，则*方向大致相反*。一个向量对自己内积开方后是该向量长度。
 
@@ -167,9 +163,14 @@ $$
 
 定义为$x\cdot y$向量x和y的内积，有：
 
-向量长度： $\Abs{x} = \sqrt{x\cdot y}$
-两点间距离（向量表示）： $\Abs{x-y}=\sqrt{(x-y)\cdot(x-y)}$
-两向量的夹角的余弦值： $\cos \theta = {x\cdot y \over \Abs{x}\Abs{y}} $
+向量长度
+: $\Abs{x} = \sqrt{x\cdot y}$
+
+两点间距离（向量表示）
+: $\Abs{x-y}=\sqrt{(x-y)\cdot(x-y)}$
+
+两向量的夹角的余弦值
+: $\cos \theta = {x\cdot y \over \Abs{x}\Abs{y}} $
 
 由余弦值可知，如果y是单位向量，$\Abs{y}=1$，则内积$x\cdot y$即向量x在y方向的投影大小。
 
@@ -187,6 +188,8 @@ $$
 [矩阵求导术 - zhihu.com](https://zhuanlan.zhihu.com/p/24709748)
 《矩阵+向量求导法则》
 
-----
+## 参考资料
 
-EOF
+- 推荐视频：《[线性代数的本质](http://www.bilibili.com/video/av6731067)》
+- 推荐课程：《[麻省理工公开课：线性代数](http://open.163.com/special/opencourse/daishu.html)》
+- 推荐教材：《线性代数及其应用》

@@ -25,7 +25,7 @@ CDF表示随机变量小于或等于其某一个取值x的概率（之和）。
 
 $$ F_X(x) = P(X \leq x) $$
 
-示例，抛一枚均匀的硬币两次，设随机变量$X$表示出现正面的次数，那么$P(X=0)=P(X=2)=1/4$，$P(X=1)=1/2$，于是$F(X=1)=P(X<=1)=P(X=0)+P(X=1)=3/4$，所以这个函数的曲线如下图：
+示例，抛一枚均匀的硬币两次，设随机变量$X$表示出现正面的次数，那么 $P(X=0)=P(X=2)=1/4$，$P(X=1)=1/2$，于是$F(X=1)=P(X<=1)=P(X=0)+P(X=1)=3/4$，所以这个函数的曲线如下图：
 ![CDF](http://image.jqian.net/probability-cdf.png)
 
 
@@ -46,15 +46,16 @@ $$\bar{X} = \frac{ \sum_{i=1}^n X_i} {n}$$
 
 ### 方差（Variance）
 
-$$s^2 = \frac{\sum_{i=1}^n (X_i - \bar{X})^2 } {n-1}$$
-
 方差用来度量随机变量和其数学期望（即均值）之间的偏离程度。
+
+$$s^2 = \frac{\sum_{i=1}^n (X_i - \bar{X})^2 } {n-1}$$
 
 ### 标准差（Standard Deviation）
 
+标准差，也称均方差（MSE，Mean Square Error），是方差的算术平方根。
+
 $$s=\sqrt{ \frac{\sum_{i=1}^n (X_i - \bar{X})^2 } {n-1} }$$
 
-标准差，也称均方差（MSE，Mean Square Error），是方差的算术平方根。
 标准差反映一个数据集的离散程度。平均数相同的，标准差未必相同。
 
 标准差给我们描述的则是样本集合的各个样本点到均值的距离之平均。
@@ -64,13 +65,14 @@ $$s=\sqrt{ \frac{\sum_{i=1}^n (X_i - \bar{X})^2 } {n-1} }$$
 
 ### 协方差（Covariance）
 
-$$cov(X,Y) = {\sum_{i=1}^n (X_i-\bar{X})(Y_i-\bar{Y}) \over n-1}$$
-
 协方差是方差的扩展，方差用来描述单个随机变量，而协方差可以用来描述两个随机变量的关系。
 
-协方差意义：如果cov为正值，则说明两者是正相关的；如果cov为负值，则说明负相关的；如果cov为0，也是就是统计上说的“相互独立”。
+$$cov(X,Y) = {\sum_{i=1}^n (X_i-\bar{X})(Y_i-\bar{Y}) \over n-1}$$
 
-皮尔逊相关系数（Pearson Correlation Coefficient）：
+协方差意义：如果cov为正值，则说明两者是正相关的；如果cov为负值，则说明负相关的；如果cov为0，也是就是统计上说的“**相互独立**”。
+
+皮尔逊相关系数（Pearson Correlation Coefficient）
+: 可以用来判断两个变量的线性相关程度。
 
 $$\begin{array} \\
 \rho_{X,Y} &= {cov(X,Y) \over \rho_X \rho_Y} \\
@@ -79,9 +81,10 @@ $$\begin{array} \\
 \end{array}
 $$
 
-可以用来判断两个变量的线性相关程度。
 
 ### 协方差矩阵
+
+协方差只能描述两个随机变量的关系，而协方差矩阵用来更多随机变量之间的关系。
 
 $$
 C=\left(\begin{matrix}
@@ -90,8 +93,6 @@ cov(y,x) & cov(y,y) & cov(y,z) \\
 cov(z,x) & cov(z,y) & cov(z,z)
 \end{matrix} \right)
 $$
-
-协方差只能描述两个随机变量的关系，而协方差矩阵用来更多随机变量之间的关系。
 
 协方差矩阵是对称矩阵，矩阵对角线即是各随机变量的方差。
 
@@ -102,45 +103,59 @@ $$
 
 设$E$是随机试验，$\Omega$是它的样本空间，对于$\Omega$中的每一个事件$A$赋予一个实数，记为事件$A$的概率，集合函数$P(.)$满足下述三条公理：
 
-公理1 $0\leq P(A) \leq 1$
-公理2 $P(\Omega) = 1$
-公理3 若事件 $$A_1,A_2,\cdots$$ 两两互不相容，则有 $$P(A_1+A_2+\cdots)=P(A_1)+P(A_2)+\cdots$$
+- 公理1 $0\leq P(A) \leq 1$
+- 公理2 $P(\Omega) = 1$
+- 公理3 若事件 $$A_1,A_2,\cdots$$ 两两互不相容，则有 $$P(A_1+A_2+\cdots)=P(A_1)+P(A_2)+\cdots$$
 
 ### 概率公式
 
-乘法规则：
-$$P(A\wedge B) = P(A|B)P(B) = P(B|A)P(A)$$
-加法规则：
-$$P(A\vee B) = P(A) +P(B) - P(A \wedge B)$$
-贝叶斯法则：
-$$P(A|B) = \frac{P(B|A) P(A) }{P(B)}$$
-全概率法则：如果事件$A_1,\dots,A_n$互斥且$\sum_{i=1}^n P(A_i)=1$，则
-$$P(B) = \sum_{i=1}^n P(B|A_i) P(A_i)$$
+乘法规则
+: $$P(A\wedge B) = P(A\vert B)P(B) = P(B\vert A)P(A)$$
+
+加法规则
+: $$P(A\vee B) = P(A) +P(B) - P(A \wedge B)$$
+
+贝叶斯法则
+: $$P(A\vert B) = \frac{P(B\vert A) P(A) }{P(B)}$$
+
+全概率法则
+: 如果事件$A_1,\dots,A_n$互斥且$\sum_{i=1}^n P(A_i)=1$，则
+: $$P(B) = \sum_{i=1}^n P(B\vert A_i) P(A_i)$$
 
 ### 条件概率
 
-$$P(\y=y|\x=x) = {P(\y=y,\x=x) \over P(\x=x)}$$
+条件概率即事件y在事件x已经发生的条件下(given)的发生概率：
+
+$$P(\y=y\vert \x=x) = {P(\y=y,\x=x) \over P(\x=x)}$$
 
 条件概率的链式法则（即乘法法则）：
 
-$$P(\x^{(1)},\dots,\x^{(n)}) = P(\x^{(1)})\prod_{i=2}^nP(x^{(i)}|\x^{(1)},\dots,\x^{(i-1)}$$
+$$
+P(\x^{(1)},\dots,\x^{(n)}) = P\left(\x^{(1)}\right) \prod_{i=2}^nP\left(x^{(i)}\vert \x^{(1)},\dots,\x^{(i-1)}\right)
+$$
 
 示例：
-$$\begin{array} \\
-P(a,b,c) &=& P(a |b,c)P(b,c) \\
-P(b,c) &=& P(b|c) P(c) \\
-P(a,b,c) &=& P(a |b,c)P(b|c) P(c)
-\end{array}$$
 
-机器学习中的贝叶斯公式：
-由 $P(h|D) = P(D|h)  P(h) / P(D)$，对于一个数据集下面的所有数据，可以认为P(D)为常数，于是 $P(h|D) \propto P(D|h) P(h)$，这个公式就是机器学习中的贝叶斯公式，一般来说我们称$P(h|D)$为模型的后验概率，就是从数据来得到假设的概率；$P(h)$称为先验概率，就是假设空间的概率；$P(D|h)$是模型的 likelihood概率。
+$$
+\begin{array} \\
+P(a,b,c) &=& P(a \vert b,c)P(b,c) \\
+P(b,c) &=& P(b\vert c) P(c) \\
+P(a,b,c) &=& P(a \vert b,c)P(b\vert c) P(c)
+\end{array}
+$$
+
+机器学习中的贝叶斯公式
+: 由 $P(h\vert D) = P(D\vert h) \frac{P(h)}{P(D)}$ ，对于一个数据集下面的所有数据，可以认为P(D)是常数，于是 $P(h\vert D) \propto P(D\vert h) P(h)$，这个公式就是机器学习中的贝叶斯公式。
+: 一般来说，我们称$P(h\vert D)$为模型的后验(posterior)概率，就是从数据来得到假设的概率；$P(h)$称为先验(prior)概率，就是假设空间的概率；$P(D\vert h)$是模型的likelihood概率。
 
 ### 边缘概率（Marginal probability）
 
 已知一组变量的联合概率分布，其中一个子集的概率分布称作边缘概率分布。
 
 假设有离散随机变量$\x$、$\y$，我们知道其联合概率分布$P(\x,\y)$，可以根据求和法则来计算$P(\x)$：
+
 $$\forall x\in\x, P(\x=x)=\sum_y P(\x=x,\y=y)$$
 
 对连续变量：
+
 $$p(x) = \int p(x,y) dy$$
