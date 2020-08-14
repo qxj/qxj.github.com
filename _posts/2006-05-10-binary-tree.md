@@ -15,59 +15,42 @@ tags: algorithm
     } *BTreeNodePtr;
 
 ## 树的遍历
-### 前序遍历
+### DFS (Depth-first search)
 
-先访问根节点，再访问左子树，然后右子树：
+深度优先遍历，按访问根节点、左子树和右子树的顺序，分为前序、中序和后序三种遍历方式。
 
-    visit(node)
-        print node.value
-        if node.left  != null then visit(node.left)
-        if node.right != null then visit(node.right))
+    traversral(node)
+        // visit(node.value) // first-order
+        if node.left  != null then traversral(node.left)
+        // visit(node.value) // in-order
+        if node.right != null then traversral(node.right))
+        // visit(node.value) // post-order
 
-### 中序遍历
+### BFS (Breadth-first search)
 
-先访问左子树，再访问根节点，然后右子树：
+广度优先遍历，前序遍历搭配`std::queue`的实现：
 
-    visit(node)
-        if node.left  != null then visit(node.left)
-        print node.value
-        if node.right != null then visit(node.right)
-
-### 后序遍历
-
-先访问左子树，再访问右子树，然后根节点：
-
-    visit(node)
-        if node.left  != null then visit(node.left)
-        if node.right != null then visit(node.right)
-        print node.value
-
-### BFS
-
-广度优先遍历，一个借助`std::queue`的实现：
-
-    void BT_LevelOrder(BTreeNode *pTreeRoot)
+    void level_order_traversal(BTreeNode *root)
     {
-        if(!pTreeRoot) return;
+        if(!root) return;
 
-        std::deque<BTreeNode *> nodeDeque;
+        std::deque<BTreeNode*> queue;
 
         // insert the root at the tail of queue
-        nodeDeque.push_back(pTreeRoot);
+        queue.push_back(root);
 
-        while(nodeDeque.size()) {
+        while(queue.size()) {
             // get a node from the head of queue
-            BTreeNode *pNode = nodeDeque.front();
-            nodeDeque.pop_front();
+            BTreeNode *node = queue.front();
+            queue.pop_front();
 
-            visit(pNode);
+            visit(node);
 
-            if(pNode->pLeft) nodeDeque.push_back(pNode->pLeft);
-            if(pNode->pRight) nodeDeque.push_back(pNode->pRight);
+            if(node->pLeft) queue.push_back(node->pLeft);
+            if(node->pRight) queue.push_back(node->pRight);
         }
     }
 
-### DFS
 
 ## 常见问题
 
