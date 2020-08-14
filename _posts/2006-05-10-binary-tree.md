@@ -28,7 +28,7 @@ tags: algorithm
 
 ### BFS (Breadth-first search)
 
-广度优先遍历，前序遍历搭配`std::queue`的实现：
+广度优先遍历，借助`std::queue`把每一层子节点暂存下来，先进先出，可以实现逐层遍历：
 
     void level_order_traversal(BTreeNode *root)
     {
