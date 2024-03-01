@@ -64,11 +64,11 @@ $ hadoop FileSystemCat hdfs://path/to/file
 
 1）客户端从HDFS中读取文件
 
-![Client read](http://image.jqian.net/hadoop-book-cli-read.jpg)
+![Client read](/assets/blog-images/hadoop-book-cli-read.jpg)
 
 2）客户端对HDFS写入数据
 
-![Client write](http://image.jqian.net/hadoop-book-cli-write.jpg)
+![Client write](/assets/blog-images/hadoop-book-cli-write.jpg)
 
 集群之间的数据复制使用 `distcp`，实际是启动MR作业执行：
 
@@ -100,7 +100,7 @@ conf.setMapOutputCompressClass(GzipCodec.class);
 
 ### 序列化
 
-![Writable interface](http://image.jqian.net/hadoop-book-writable.jpg)
+![Writable interface](/assets/blog-images/hadoop-book-writable.jpg)
 
 自定义Writable：
 
@@ -183,14 +183,14 @@ TaskTracker申请到任务后，会做如下事情：
 - 拷贝任务的信息到本地；
 - 启动JVM运行任务。
 
-![Run mr job](http://image.jqian.net/hadoop-book-run-job.jpg)
+![Run mr job](/assets/blog-images/hadoop-book-run-job.jpg)
 
 4）进度和状态更新
 
 - 任务在运行过程中，首先会将自己的状态汇报给TaskTracker，然后由TaskTracker汇总告之JobTracker。
 - 任务进度是通过计数器来实现的。
 
-![Job status](http://image.jqian.net/hadoop-book-job-status.jpg)
+![Job status](/assets/blog-images/hadoop-book-job-status.jpg)
 
 5）Streaming和Pipes
 
@@ -251,7 +251,7 @@ Reduce
 - reduce的Shuffle过程，分成三个阶段：复制Map输出、排序合并、reduce处理。
 - 主要代码在reduce的run函数
 
-![Shuffle&sort](http://image.jqian.net/hadoop-book-shuffle-sort.jpg)
+![Shuffle&sort](/assets/blog-images/hadoop-book-shuffle-sort.jpg)
 
 ### 任务的执行
 
@@ -281,7 +281,7 @@ Hadoop为Map与Reduce任务提供运行环境。
 
 When a hadoop job is run, it splits input files into chunks and assign each split to a mapper to process. This is called Input Split
 
-![Split](http://image.jqian.net/hadoop-book-input-split.jpg)
+![Split](/assets/blog-images/hadoop-book-input-split.jpg)
 
 分片(split)的概念在开发MR程序时非常重要，由`InputSplit`类定义，应该阅读相关代码才能理解深刻：
 

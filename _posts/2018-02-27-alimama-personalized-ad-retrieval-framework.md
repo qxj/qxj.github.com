@@ -7,7 +7,7 @@ tags: adtech paper
 
 为了兼顾效果和性能，一般分为QR(Rewriting)和检索(Ad-selecting)两部分。
 
-![传统召回架构](http://image.jqian.net/alimama-ad-retrieval-arch.jpg)
+![传统召回架构](/assets/blog-images/alimama-ad-retrieval-arch.jpg)
 
 - QR主要考虑query和bidword的文本相关性，目标并非优化RPM/CTR。
 - 索引依赖bidword。但受限于市场信息的缺失和投放管理的成本，广告主有时并不能及时准确地为自己的广告选择出最合适的bidword。
@@ -32,7 +32,7 @@ QR
 
 ## 智能检索模型
 
-![阿里妈妈智能检索系统](http://image.jqian.net/alimama-ad-retrieval-system.jpg)
+![阿里妈妈智能检索系统](/assets/blog-images/alimama-ad-retrieval-system.jpg)
 
 **3232** 3种node、2种edge、3种init、2份index
 
@@ -58,7 +58,7 @@ QR
 - **Rewriting index** signal->key
 - **Ad-selecting index** key->ad
 
-![](http://image.jqian.net/alimama-ad-retrieval-nodes.jpg)
+![](/assets/blog-images/alimama-ad-retrieval-nodes.jpg)
 
 ### 初始化图
 

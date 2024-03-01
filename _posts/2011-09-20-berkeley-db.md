@@ -113,7 +113,7 @@ WAL是很多事务性数据库使用的技术，即在数据实际写入到数�
 
 采用BTREE/HASH访问方式下，并发操作时，无法避免死锁，因为page splits随时可能发生，见图：
 
-![Btree deadlock](http://image.jqian.net/btree_deadlock.png)
+![Btree deadlock](/assets/blog-images/btree_deadlock.png)
 
 死锁检测（原理是遍历wait-for图，发现环；如果有环出现，则打破它）：
 

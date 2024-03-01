@@ -33,7 +33,7 @@ asio基于两个概念：
 
 和我们熟知的Reactor不同，Asio使用Proactor模型：
 
-![](http://image.jqian.net/asio_proactor.png)
+![](/assets/blog-images/asio_proactor.png)
 
 1. Initiator使用Asynchronous Operation Processor发起异步I/O操作
 2. 保存每个异步I/O操作的参数，包括回调函数的地址，并将其放入Completion Event Queue

@@ -50,7 +50,7 @@ $$π = P(\mbox{reject H0} | \mbox{H1 is true})$$
 
 如果先前有人已得出得出论断，全校学生平均上网时间为5小时，则属于参数已知，而你想验证该已知参数可不可信，这时做的就是*假设检验*：样本得到的平均3小时的上网时间告诉你，先前关于总体的信息很可能是不靠谱的，拒绝该论断。
 
-![P value](http://image.jqian.net/confidence-interval-p-value.png)
+![P value](/assets/blog-images/confidence-interval-p-value.png)
 
 
 ## 区间估计

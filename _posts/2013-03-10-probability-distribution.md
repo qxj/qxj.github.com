@@ -178,7 +178,7 @@ $$
 $$
 
 Gamma函数是阶乘在实数集上的推广，对整数有 $\Gamma(n)=(n-1)!$。
-![gamma distribution](http://image.jqian.net/probability-distribution-gamma.png)
+![gamma distribution](/assets/blog-images/probability-distribution-gamma.png)
 
 Gamma分布的一般形式
 
@@ -253,7 +253,7 @@ $$
 $Y=X^2$是自由度为1的$\chi^2$分布，$rank(Y)=1$；$Z=\sum_{i=1}^nX_i^2$ 是自由度为n的 $\chi^2$ 分布，$rank(Z)=n$。
 
 $\chi^2$分布的PDF曲线：
-![Chi^2 dist](http://image.jqian.net/probability-distribution-chi.jpg)
+![Chi^2 dist](/assets/blog-images/probability-distribution-chi.jpg)
 
 $$
 E(\chi^2) = n \\
@@ -270,7 +270,7 @@ $$
 设随机变量 $X \sim N(0,1)$，$Y \sim \chi^2(n)$，且X与Y独立，则 $t={X \over \sqrt{Y/n}}$ ，其分布称为t分布t(n)，其中n是其自由度。
 
 t分布的密度函数是一偶函数：
-![t dist](http://image.jqian.net/probability-distribution-t.jpg)
+![t dist](/assets/blog-images/probability-distribution-t.jpg)
 
 $$
 E(t) = 0, \text{if}\quad n\ge 2 \\
@@ -284,7 +284,7 @@ $$
 > F分布在方差分析、回归方程的显著性检验中都有重要地位。
 
 设随机变量Y和Z互相独立，且Y和Z分别服从自由度为m和n的$\chi^2$分布，随机变量 $X={Y/m \over Z/n}=\frac{nY}{mZ}$，则称X服从第一自由度为m，第二自由度为n的F分布，记为 $X \sim F(m,n)$ 。
-![F dist](http://image.jqian.net/probability-distribution-f.jpg)
+![F dist](/assets/blog-images/probability-distribution-f.jpg)
 
 
 $$

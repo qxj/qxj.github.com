@@ -123,17 +123,17 @@ SSD | OCZ-TRION100 120GB
 
 可以看到转接后显卡和主板接口在一个平面上了。Z170N-WIFI的接口还是比较齐全的，可惜macOS上WI-FI驱动不了，一般推荐购买BCM94352HMB（PCI-E接口）或BCM94352Z（m.2接口）无线网卡，或者USB网卡。
 
-![case](http://image.jqian.net/hackintosh-case.jpg)
+![case](/assets/blog-images/hackintosh-case.jpg)
 
 机箱两面分隔为两个散热区，GPU、CPU和电源风扇均直接从外部吸入冷风，GPU热量从顶部散热孔排出，CPU热量从背后面板侧散热孔排出。光驱位改造一下还可以再挂载一个3.5寸硬盘。由于没有额外定制线缆，电源附近线缆稍杂乱。
 
-![inside](http://image.jqian.net/hackintosh-inside.jpg)
+![inside](/assets/blog-images/hackintosh-inside.jpg)
 
 新版鲁大师跑分约25万，CPU 6万+，GPU 14万+；温度压力测试20分钟，CPU和GPU最高温度70℃；室温25℃正常使用CPU核心温度34℃左右，如果用AXP-100可能会更好一些。
 
 # 软件
 
-![high sierra](http://image.jqian.net/hackintosh-high-sierra.jpg)
+![high sierra](/assets/blog-images/hackintosh-high-sierra.jpg)
 
 工欲善其事，必先利其器。Hackintosh只要硬件选择得当，后续的驱动基本都很简单了，参考tonymacx86论坛[install guide](https://www.tonymacx86.com/threads/unibeast-install-macos-high-sierra-on-any-supported-intel-based-pc.235474/)就能得到一个基本可用的系统。
 

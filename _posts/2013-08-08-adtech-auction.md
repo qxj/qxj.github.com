@@ -63,7 +63,7 @@ $$
 
 因此，仅按广告主出价对广告进行排序是不够的，出价最高的不一定是和用户最相关的。参考Google的机制设计是将cpc乘上广告的*质量分*(Quality Score)进行广告排序，质量分的计算基于CTR和其它因素。并且，每次点击计费是下一名出价加上一个很小的值。淘宝直通车对站内广告计费，也采用类似办法。
 
-![淘宝直通车计费示例](http://image.jqian.net/adtech-auction-zhitongche.png)
+![淘宝直通车计费示例](/assets/blog-images/adtech-auction-zhitongche.png)
 
 如下是广告系统里一种比较原始的GSP auction实现：
 

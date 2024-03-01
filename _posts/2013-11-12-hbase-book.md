@@ -265,7 +265,7 @@ endpoint，类似RDBMS中的存储过程
 void addFamily(HColumnDescriptor family);
 ```
 
-![](http://image.jqian.net/hbase_book_arch.png)
+![](/assets/blog-images/hbase_book_arch.png)
 
 可以通过HBaseAdmin管理表。
 
@@ -310,7 +310,7 @@ LSM树以磁盘传输速率工作并能较好的扩展以处理大量数据，�
 
 ## 8.2 存储
 
-![HDFS](http://image.jqian.net/hbase_book_hdfs.png)
+![HDFS](/assets/blog-images/hbase_book_hdfs.png)
 
 Hbase处理两种文件：预写日志（Write-Ahead-Log，WAL） 和 实际的数据文件。
 
@@ -322,7 +322,7 @@ Hbase处理两种文件：预写日志（Write-Ahead-Log，WAL） 和 实际的�
 
 HFile格式（类似Google SSTable）
 
-![HFile](http://image.jqian.net/hbase_book_hfile.png)
+![HFile](/assets/blog-images/hbase_book_hfile.png)
 
 块大小由HColumnDescriptor配置，默认是64KB。
 
@@ -336,7 +336,7 @@ $ ./bin/hbase org.apache.hadoop.hbase.io.hfile.HFile -f /path/to/hfile -v -m -p
 
 KeyValue格式
 
-![KeyValue](http://image.jqian.net/hbase_book_keyvalue.png)
+![KeyValue](/assets/blog-images/hbase_book_keyvalue.png)
 
 
 ## 8.3 WAL

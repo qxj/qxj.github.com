@@ -11,7 +11,7 @@ AC算法(Aho-Corasick)是KMP算法向多模式串情形的扩展，该算法使�
 
 每读入一个字符，KMP算法更新 *既是模式串的前缀、同时也是已读入文本的后缀* 的最长字符串的长度。设字符串vβ是下一个 既是模式串p的前缀、同时也是已读入文本t<sub>1</sub>...t<sub>i+1</sub>的后缀 的最长字符串。可以看出：对模式串当前已匹配前缀u来说，*v既是u的一个后缀、也是u的一个前缀*，并且字符β一定与t<sub>i+1</sub>（即σ）相等。这里，称v是u的一个边界。
 
-![kmp示例](http://image.jqian.net/spm_kmp.png)
+![kmp示例](/assets/blog-images/spm_kmp.png)
 
 KMP算法：
 
@@ -30,7 +30,7 @@ AC算法中类似next数组的是一颗改造过的trie树。用q表示模式P�
 
 下图为模式集合P={ATATATA, TATAT, ACGATAT}的AC自动机，虚线为S<sub>AC</sub>，双圆圈为终结状态。例如，L(15)=ACGATA，既是它的后缀，同时也是某个模式串(这里是ATATATA)的前缀的最长字符串是ATA，对应状态7，因此S<sub>AC</sub>(15)=7。终结状态是那些对应于整个模式串的状态，此外，如果从状态q到根节点的路径上存在终结状态，那么q也是终结状态。例如，由于S<sub>AC</sub>(16)是终结状态，所以16也是终结状态。
 
-![ac状态机示例](http://image.jqian.net/spm_ac.png)
+![ac状态机示例](/assets/blog-images/spm_ac.png)
 
 假设已经读入文本t<sub>1</sub>...t<sub>i</sub>，而既是其后缀、同时也是某个模式串的前缀的最长字符串对应AC自动机的Current状态，记该字符串为v=L(Current)。当读入下一个字符t<sub>i+1</sub>并计算t<sub>1</sub>...t<sub>i</sub>t<sub>i+1</sub>的新的最长后缀u时，有两种情况：
 

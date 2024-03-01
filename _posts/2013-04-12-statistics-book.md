@@ -122,7 +122,7 @@ $$
 
 以$\phi$记作N(0,1)的分布函数，对 0<β<1（一般β很小），用方程 $\phi(u_\beta)=1-\beta$，定义记号$u_\beta$。
 则$u_\beta$称为分布N(0,1)的 “上β分位点”。其意义是N(0,1)分布中大于$u_\beta$那部分的概率（积分），即β（面积）。
-![分位点](http://image.jqian.net/prob-stat-book-quantile.png)
+![分位点](/assets/blog-images/prob-stat-book-quantile.png)
 
 传统上，这个分位点都可以查表获得。
 

@@ -29,7 +29,7 @@ tags: Windows
 
 系统是2003server，web服务器使用的iis6，除了iis6之外，就开了一个rmserver，其他没有运行什么服务和额外程序了，防病毒用的mcafee8i，防火墙使用打完sp1自带的? 下边是一个拓扑图：
 
-![Windows双网卡拓扑图](http://image.jqian.net/daul_eth_conflict.jpg)
+![Windows双网卡拓扑图](/assets/blog-images/daul_eth_conflict.jpg)
 
 ## 解决
 

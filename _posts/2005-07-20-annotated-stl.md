@@ -46,13 +46,13 @@ struct iterator_traits {
 
 `std::list` 双向循环链表，为了保证迭代器维护前开后闭区间，一个trick是尾节点是一个空节点，同时该节点的next指向头节点。
 
-![list结构](http://image.jqian.net/annotated-stl-list.jpg)
+![list结构](/assets/blog-images/annotated-stl-list.jpg)
 
 ### deque
 
 `std::deque` 实际内存分配由*分段*连续线性空间组成，对比vector的内存分配中间增加了一层map，其实是转化成了二维结构。map的元素指向实际的内存空间。当map两端需要增长的时候，会重新realloc这个map数组，而实际使用的内存空间不受影响。所以，deque的关键在于边界处理。
 
-![deque结构](http://image.jqian.net/annotated-stl-deque.jpg)
+![deque结构](/assets/blog-images/annotated-stl-deque.jpg)
 
 ### map
 

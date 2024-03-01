@@ -198,7 +198,7 @@ if __name__ == "__main__":
 
 利用这个[绘图脚本](http://d.pr/n/SrIt)，可以输出决策树的直观图示：
 
-![决策树示例图](http://image.jqian.net/dtree_example.png)
+![决策树示例图](/assets/blog-images/dtree_example.png)
 
 ### C4.5
 

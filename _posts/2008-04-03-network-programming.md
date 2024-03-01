@@ -7,11 +7,11 @@ tags: network Programming reading
 
 TCP状态转换图
 
-![TCP状态转换图](http://image.jqian.net/network_tcp_state.png)
+![TCP状态转换图](/assets/blog-images/network_tcp_state.png)
 
 一次完整的TCP连接：连接建立、数据传输、连接终止。
 
-![一次完整的TCP连接](http://image.jqian.net/network_tcp_process.png)
+![一次完整的TCP连接](/assets/blog-images/network_tcp_process.png)
 
 可以看出建立TCP连接需要经过3步，SYN、SYN+ACK、ACK；而关闭则需要4步，FIN、ACK、FIN、ACK。
 

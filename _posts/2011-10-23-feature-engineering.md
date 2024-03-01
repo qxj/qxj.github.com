@@ -144,7 +144,7 @@ Filter方法和Wrapper方法都是和分类算法本身的实现无关，可以�
 参考：http://www.win-vector.com/blog/2011/09/the-simpler-derivation-of-logistic-regression/ 最后的结论：coordinate-free。
 
 标准化之前：
-![Before norm](http://image.jqian.net/feature_engineering_unnorm.png)
+![Before norm](/assets/blog-images/feature_engineering_unnorm.png)
 
 标准化之后：
-![norm](http://image.jqian.net/feature_engineering_norm.png)
+![norm](/assets/blog-images/feature_engineering_norm.png)

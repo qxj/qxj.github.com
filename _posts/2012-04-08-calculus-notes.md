@@ -53,7 +53,7 @@ Hessian
 
 导数（Derivative）的概念非常基础，在优化理论中求极值一般都搭配泰勒公式使用。
 
-![derivative](http://image.jqian.net/calculus-derivative.png)
+![derivative](/assets/blog-images/calculus-derivative.png)
 
 
 可以看到当$h\to 0$时候，该直线的方向就是导数方向。

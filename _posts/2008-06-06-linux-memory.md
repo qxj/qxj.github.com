@@ -5,7 +5,7 @@ tags: Linux memory Programming
 
 一个32位系统的内存布局一般是这样的：
 
-![内存布局](http://image.jqian.net/memory_layout.png)
+![内存布局](/assets/blog-images/memory_layout.png)
 
 由于 .bss 段都被初始化为0，所以对应可执行程序文件里是不存在 .bss 段的，只有数据段和代码段这两部分。可以用 `size` 命令查看文件的内存布局，比如：
 
@@ -54,7 +54,7 @@ Linux虚拟内存（Virtual Memory）为2^32=4G Bytes（假设32bit x86 platform
 - ebp 即帧指针（frame pointer），用于保存栈帧（stack frame）位置，即函数的活动记录。相关的编译选项是 `-fomit-frame-pointer`。
 - esp 即栈寄存器，用于保存栈顶位置。
 
-![stack](http://image.jqian.net/memory_stack.png)
+![stack](/assets/blog-images/memory_stack.png)
 
 其中，ebp是固定的，而esp是始终指向栈顶的，随着函数的执行，会不断移动。由于ebp是固定不变的，所以可以方便的定位栈帧（活动记录）里的各个数据。
 

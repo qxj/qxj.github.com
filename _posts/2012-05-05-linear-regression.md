@@ -208,7 +208,7 @@ show()
 
 得到如下示意图
 
-![leastsq example](http://image.jqian.net/regression_example.png)
+![leastsq example](/assets/blog-images/regression_example.png)
 
 ## 参考
 

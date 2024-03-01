@@ -39,7 +39,7 @@ $$
 例二，连续复利：
 假设银行年利率5%，小明每年往银行存100¥，连续复利计算，5年后小明的总收益：
 
-![convolution compound interest](http://image.jqian.net/convolution_compound_interest.png)
+![convolution compound interest](/assets/blog-images/convolution_compound_interest.png)
 
 用求和符号来简化这个公式就是：
 

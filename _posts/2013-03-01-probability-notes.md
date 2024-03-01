@@ -26,7 +26,7 @@ CDF表示随机变量小于或等于其某一个取值x的概率（之和）。
 $$ F_X(x) = P(X \leq x) $$
 
 示例，抛一枚均匀的硬币两次，设随机变量$X$表示出现正面的次数，那么 $P(X=0)=P(X=2)=1/4$，$P(X=1)=1/2$，于是$F(X=1)=P(X<=1)=P(X=0)+P(X=1)=3/4$，所以这个函数的曲线如下图：
-![CDF](http://image.jqian.net/probability-cdf.png)
+![CDF](/assets/blog-images/probability-cdf.png)
 
 
 对于这个图，要想清楚清楚如下两个问题：

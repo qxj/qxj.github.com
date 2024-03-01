@@ -19,7 +19,7 @@ $$
 
 【疑惑】这里参考了《生物统计学》10. 卡方分布，和之前学到卡方分布的定义有点偏差？
 
-![卡方分布](http://image.jqian.net/hypothesis-testing-chi.jpg)
+![卡方分布](/assets/blog-images/hypothesis-testing-chi.jpg)
 
 
 ### 适合度检验（goodness of fit test）

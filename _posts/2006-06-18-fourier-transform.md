@@ -10,7 +10,7 @@ tags: math algorithm
 | 非周期性离散信号 |  离散时域傅立叶变换（Discrete Time Fourier Transform）|
 | 周期性离散信号   |   离散傅立叶变换(Discrete Fourier Transform) |
 
-![Fourier transform types](http://image.jqian.net/fourier_types.png)
+![Fourier transform types](/assets/blog-images/fourier_types.png)
 
 计算机因为只能处理离散信号，所以涉及到的是DFT。
 
@@ -80,7 +80,7 @@ $$
 
 显然，一个多项式只能有一种系数表达，但可以有很多种点值表达。从系数表达式推出点值表达式，称做**求值**；反过来，从点值表达求解出系数表达，称做**插值**。
 
-![Polynomial multiplication](http://image.jqian.net/fourier_polynomial.jpg)
+![Polynomial multiplication](/assets/blog-images/fourier_polynomial.jpg)
 
 通过使用单位复数根（借助欧拉公式），FFT可以在 $O(n\log n)$ 时间复杂度内完成求值和插值计算。
 

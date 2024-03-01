@@ -21,7 +21,7 @@ tags: 广告
 - 离散到离散 hashing：10000x1000dim (q,u)vector -> 1000dim hash table (有collision）
 - 离散到统计 statistics：10000x1000dim (q,u)vector -> historic ctr, historic impr
 
-![维度约减](http://image.jqian.net/baidu-ad-feature-hash.png)
+![维度约减](/assets/blog-images/baidu-ad-feature-hash.png)
 
 关键是减少信息的损失
 
@@ -74,7 +74,7 @@ $$
 
 Google：新特征按概率p加入；Bloom Filter+次数超过N；AucLoss升高。
 
-![特征删减](http://image.jqian.net/baidu-ad-feature-compare.jpg)
+![特征删减](/assets/blog-images/baidu-ad-feature-compare.jpg)
 
 
 #### Fea-G算法

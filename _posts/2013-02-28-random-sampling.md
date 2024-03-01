@@ -24,7 +24,7 @@ http://blog.csdn.net/bemachine/article/details/12584971
 【注意】需要已知目标分布pdf。
 
 使用场景是有些函数$p(x)$太复杂在程序中没法直接采样，那么可以设定一个程序可抽样的分布$q(x)$比如正态分布等等，然后按照一定的方法拒绝某些样本，达到接近$p(x)$分布的目的：
-![rejection sampling](http://image.jqian.net/sampling-rejection.png)
+![rejection sampling](/assets/blog-images/sampling-rejection.png)
 
 具体操作如下，设定一个方便抽样的函数$q(x)$，以及一个常量$k$，使得$p(x)$总在$kq(x)$的下方。
 
@@ -222,7 +222,7 @@ $$
 
 对于高维的情形，由于接受率 $\alpha$ 的存在(通常 $\alpha\lt 1$), 以上 Metropolis-Hastings 算法的效率仍然不够高。能否找到一个转移矩阵$Q$使得接受率 $\alpha=1$ 呢？
 
-![Gibbs sampling](http://image.jqian.net/sampling-gibbs.png)
+![Gibbs sampling](/assets/blog-images/sampling-gibbs.png)
 
 假设两个随机变量$x$和$y$，在$x=x_1$这条平行于 $y$ 轴的直线上，如果使用条件分布 $p(y\vert x_1)$ 做为任何两个点之间的转移概率，那么任何两个点之间的转移满足细致平稳条件。同样的，如果我们在 $y=y_1$ 这条直线上任意取两个点 $A(x_1,y_1),C(x_2,y_1)$，也一样。
 

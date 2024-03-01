@@ -27,7 +27,7 @@ tags: adtech
 
 广告的有效性模型
 
-![广告的有效性模型](http://image.jqian.net/comput-ad-effective-model.png)
+![广告的有效性模型](/assets/blog-images/comput-ad-effective-model.png)
 
 在线广告的两个评价指标：CTR和CVR （RPM和ROI呢？）
 

@@ -30,7 +30,7 @@ $$
 
 混淆矩阵是监督学习中的一种可视化工具，主要用于比较分类结果和实例的真实信息（outcome vs. ground truth）。
 
-![混淆矩阵](http://image.jqian.net/classification_confusion_matrix.png)
+![混淆矩阵](/assets/blog-images/classification_confusion_matrix.png)
 
 矩阵中的每一行代表实例的预测类别，每一列代表实例的真实类别。
 
